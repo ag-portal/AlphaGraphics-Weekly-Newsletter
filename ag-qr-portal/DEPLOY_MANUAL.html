@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AlphaGraphics Portal — Deployment &amp; Maintenance Manual</title>
+<style>
+  :root{
+    --red:#DA291C; --red-deep:#B11F14;
+    --ink:#1a1a1a; --muted:#5b5b5b; --line:#e3e3e0; --bg-soft:#f6f5f2;
+    --mono:"SFMono-Regular",Consolas,"Liberation Mono",Menlo,monospace;
+    --sans:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    --serif:Georgia,"Times New Roman",serif;
+  }
+  doc-page:not(:defined){visibility:hidden;}
+  doc-page{ color:var(--ink); font-family:var(--sans); font-size:11.5px; line-height:1.6; }
+  h1,h2,h3{ font-family:var(--serif); color:var(--ink); line-height:1.15; }
+  h1{ font-size:30px; margin:0 0 4px; }
+  .subtitle{ color:var(--muted); font-size:13px; margin:0 0 4px; }
+  .meta{ color:var(--muted); font-size:10px; letter-spacing:.04em; text-transform:uppercase; }
+  hr.rule{ border:0; border-top:2px solid var(--red); margin:16px 0 22px; }
+  h2{ font-size:18px; margin:26px 0 8px; padding-bottom:5px; border-bottom:1px solid var(--line); }
+  h2 .n{ color:var(--red); font-family:var(--sans); font-weight:800; font-size:14px; margin-right:8px; }
+  h3{ font-size:13.5px; margin:16px 0 4px; }
+  p{ margin:0 0 9px; }
+  ul,ol{ margin:0 0 10px; padding-left:20px; }
+  li{ margin:0 0 5px; }
+  code{ font-family:var(--mono); font-size:10.5px; background:var(--bg-soft); border:1px solid var(--line); border-radius:3px; padding:1px 4px; }
+  .path{ color:var(--red-deep); }
+  .callout{ background:var(--bg-soft); border-left:4px solid var(--red); border-radius:4px; padding:11px 14px; margin:12px 0; break-inside:avoid; }
+  .callout .lab{ font-weight:800; font-size:9.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--red); margin:0 0 4px; }
+  .callout.warn{ border-left-color:#8a6d00; }
+  .callout.warn .lab{ color:#8a6d00; }
+  .step{ break-inside:avoid; margin:0 0 10px; }
+  .who{ display:inline-block; font-size:8.5px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; padding:1px 7px; border-radius:10px; vertical-align:middle; margin-left:6px; }
+  .who.you{ background:#e7f0ff; color:#1a4a9c; }
+  .who.ai{ background:#fde8e6; color:var(--red-deep); }
+  .who.legend{ margin:0 8px 0 0; }
+  table.map{ width:100%; border-collapse:collapse; margin:8px 0 12px; font-size:10.5px; }
+  table.map th,table.map td{ text-align:left; border:1px solid var(--line); padding:6px 9px; vertical-align:top; }
+  table.map th{ background:var(--bg-soft); font-family:var(--sans); }
+  .foot{ font-family:var(--sans); font-size:9px; color:var(--muted); display:flex; justify-content:space-between; padding:0 2px; }
+  .toc{ font-size:11px; }
+  .toc li{ margin:0 0 3px; }
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FB86280RK6"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-FB86280RK6');
+</script>
+</head>
+<body>
+<doc-page size="letter" margin="0.7in">
+
+  <div slot="footer" class="foot">
+    <span>AlphaGraphics Shavano Park — FAQ Friday Portal</span>
+    <span>Deployment &amp; Maintenance Manual</span>
+  </div>
+
+  <p class="meta">AlphaGraphics Shavano Park</p>
+  <h1>FAQ Friday Portal — Deployment &amp; Maintenance Manual</h1>
+  <p class="subtitle">How to publish new newsletters, reorder the library, compress images, and redeploy to Netlify.</p>
+  <hr class="rule">
+
+  <p style="margin-bottom:12px;">
+    <span class="who you who-legend legend">YOU</span> = steps you do yourself &nbsp;·&nbsp;
+    <span class="who ai legend">ASSISTANT</span> = ask Claude to do it (needs the build tools)
+  </p>
+
+  <h2><span class="n">00</span>How the portal is built</h2>
+  <p>The whole site is one folder: <code class="path">AG QR Portal/</code>. You deploy that folder to Netlify. Inside it:</p>
+  <table class="map">
+    <tr><th>File / folder</th><th>What it is</th></tr>
+    <tr><td><code>index.html</code></td><td>The landing page (service tiles, FAQ Friday list, contact card). This is a <em>bundled</em> file — all images and fonts are packed inside it.</td></tr>
+    <tr><td><code>newsletters/Week01.html</code> …</td><td>One self-contained newsletter per issue. Also bundled (~1&nbsp;MB each).</td></tr>
+    <tr><td><code>doc-page.js</code>, this manual</td><td>Support files. Harmless to leave in the folder; they don't affect the live site.</td></tr>
+  </table>
+  <p>The <strong>editable sources</strong> live one level up, outside the deploy folder, and are what actually get edited:</p>
+  <table class="map">
+    <tr><th>Source</th><th>Purpose</th></tr>
+    <tr><td><code class="path">FAQ Friday Newsletters/newsletter-data.js</code></td><td>All newsletter copy, stats, captions, and slugs — the single source of truth for wording.</td></tr>
+    <tr><td><code class="path">FAQ Friday Newsletters/newsletter-render.js</code></td><td>The shared layout/renderer. Rarely changes.</td></tr>
+    <tr><td><code class="path">FAQ Friday Newsletters/digital/WeekNN.html</code></td><td>A tiny page that renders one week for preview before bundling.</td></tr>
+    <tr><td><code class="path">assets/masters/</code> · <code class="path">assets/spotlight/</code></td><td>The photos each newsletter uses.</td></tr>
+  </table>
+
+  <div class="callout warn">
+    <p class="lab">The one rule that matters</p>
+    <p style="margin:0;">Never hand-edit a file inside <code>AG QR Portal/</code> in a text editor — they are compiled bundles. Always change the <em>source</em> and re-bundle. (The assistant handles the bundling; it also handles a subtle <code>&lt;/script&gt;</code> escaping quirk that will silently break the page if edited by hand.)</p>
+  </div>
+
+  <h2><span class="n">01</span>Publish a new newsletter (the weekly job)</h2>
+  <p>Say the new one is <strong>Week&nbsp;05</strong>. The pattern is identical every week — just change the number.</p>
+
+  <div class="step">
+    <h3>1 — Finalize the copy <span class="who you">YOU</span></h3>
+    <p>Confirm the wording for week <code>05</code> in <code class="path">newsletter-data.js</code> reads the way you want. Check it against the voice rules (see §6). Make sure the week's photos exist in <code class="path">assets/masters/</code> and <code class="path">assets/spotlight/</code>.</p>
+  </div>
+  <div class="step">
+    <h3>2 — Preview it <span class="who ai">ASSISTANT</span></h3>
+    <p>Ask: <em>"Show me the Week 05 digital newsletter."</em> Read it top to bottom — headline, stats, spotlight captions, the "one honest catch," and the closing CTA.</p>
+  </div>
+  <div class="step">
+    <h3>3 — Bundle it into the deploy folder <span class="who ai">ASSISTANT</span></h3>
+    <p>Ask: <em>"Bundle Week 05 to the portal."</em> Under the hood this makes a temp scaffold, runs the inliner, and writes <code class="path">AG QR Portal/newsletters/Week05.html</code>. Result: a single ~1&nbsp;MB self-contained file.</p>
+  </div>
+  <div class="step">
+    <h3>4 — Add it to the library list, at the top <span class="who ai">ASSISTANT</span></h3>
+    <p>Ask: <em>"Add Week 05 to the top of the FAQ Friday list on the portal."</em> This inserts a new card with the issue number, category, date, and question, linking to <code>./newsletters/Week05.html</code>. See §2 for exactly how the ordering works.</p>
+  </div>
+  <div class="step">
+    <h3>5 — Redeploy <span class="who you">YOU</span></h3>
+    <p>See §4. Download the folder and drop it into Netlify.</p>
+  </div>
+
+  <h2><span class="n">02</span>Reorder the library (bump older issues down)</h2>
+  <p>The FAQ Friday list shows the <strong>two newest issues</strong> up top and hides the rest behind an <strong>"Earlier issues"</strong> expander. Newest is always first; oldest is last.</p>
+  <p>When a new issue is added, everything shifts down by one:</p>
+  <ul>
+    <li>The new issue becomes <strong>visible #1</strong>.</li>
+    <li>The previous #1 becomes <strong>visible #2</strong>.</li>
+    <li>The previous #2 drops <strong>into the "Earlier issues" section</strong>, at the top of that hidden list.</li>
+    <li>Everything already hidden stays in order below it.</li>
+  </ul>
+  <p>In plain terms: <em>"newest two shown, all older ones collapsed, newest-first throughout."</em> Just tell the assistant <em>"bump the list — newest two visible, the rest under Earlier issues"</em> and it will re-sort the cards. You never have to touch the code.</p>
+  <div class="callout">
+    <p class="lab">Each card needs</p>
+    <p style="margin:0;">Issue number, category (e.g. <em>Trade Shows</em>), publish date, the question headline, and the link to its <code>WeekNN.html</code>. Give these to the assistant and it builds the card.</p>
+  </div>
+
+  <h2><span class="n">03</span>Compress images (keep the site fast &amp; cheap)</h2>
+  <p>Image weight is the #1 driver of Netlify bandwidth cost. Two places to watch:</p>
+  <h3>Portal landing page tiles</h3>
+  <p>The five service-tile photos are baked into <code>index.html</code>. Target: <strong>JPEG, ≤ 1200&nbsp;px on the long edge, quality ~0.82, ≤ ~250&nbsp;KB each.</strong> The whole landing page should stay <strong>under ~1.5&nbsp;MB</strong> (it was 9.2&nbsp;MB before compression — that one fix multiplied the free-tier headroom ~6×).</p>
+  <h3>Newsletter photos</h3>
+  <p>Masters and spotlights in <code class="path">assets/</code>. Spotlights are square (1:1); masters are the wide hero image. A finished newsletter around <strong>~1&nbsp;MB</strong> is healthy.</p>
+  <p>To compress, ask the assistant: <em>"Compress the portal tile images"</em> or <em>"these photos are too heavy — shrink them."</em> It decodes each image, resizes, and re-encodes as JPEG in place. <span class="who ai">ASSISTANT</span></p>
+  <div class="callout">
+    <p class="lab">Quick sanity check</p>
+    <p style="margin:0;">A full visit (landing page + one newsletter) should total roughly <strong>2–3&nbsp;MB</strong>. On Netlify's free allowance that's several thousand visits a month — plenty for QR-scan traffic.</p>
+  </div>
+
+  <h2><span class="n">04</span>Deploy to Netlify</h2>
+  <ol>
+    <li>Ask the assistant: <em>"Give me the portal folder to deploy."</em> You'll get a downloadable <code>AG QR Portal</code> zip. <span class="who ai">ASSISTANT</span></li>
+    <li>Unzip it. <span class="who you">YOU</span></li>
+    <li><strong>First time:</strong> at <code>app.netlify.com</code> → <em>Add new site → Deploy manually</em>, then drag the unzipped folder onto the drop area. Netlify gives you a URL. <span class="who you">YOU</span></li>
+    <li><strong>Updates:</strong> open your site → <em>Deploys</em> tab → drag the new folder onto the drop zone. It replaces the live version in seconds. <span class="who you">YOU</span></li>
+  </ol>
+  <div class="callout warn">
+    <p class="lab">Deploy the folder, not just index.html</p>
+    <p style="margin:0;">The landing page links to <code>./newsletters/Week01.html</code> etc. If you upload only <code>index.html</code>, every newsletter link 404s. Always deploy the whole folder.</p>
+  </div>
+  <h3>Free-tier notes</h3>
+  <ul>
+    <li>New Netlify accounts: ~<strong>15&nbsp;GB bandwidth/month</strong> (credit model). Accounts created before Sep 2025 keep the older ~<strong>100&nbsp;GB</strong>.</li>
+    <li>The free plan doesn't auto-bill — if you exhaust it, the site simply pauses until the next month. No surprise charges.</li>
+    <li>Only consider upgrading (Personal $9 / Pro $20) if scans climb into the tens of thousands per month. Cloudflare Pages is a free alternative with unlimited bandwidth.</li>
+  </ul>
+
+  <h2><span class="n">05</span>The "Save Our Contact Info" logo</h2>
+  <p>The Save button downloads a contact card (vCard) with the AG logo embedded, so it becomes the contact photo on a phone. If the logo ever changes, ask the assistant to <em>"re-embed the new logo in the contact card."</em> It re-encodes a square ~400&nbsp;px JPEG into the card. <span class="who ai">ASSISTANT</span></p>
+  <div class="callout">
+    <p class="lab">Testing tip</p>
+    <p style="margin:0;">iPhones cache contacts and web pages aggressively. When testing a change, delete the old saved contact first, and hard-refresh the page, or the old version can linger.</p>
+  </div>
+
+  <h2><span class="n">06</span>Voice &amp; tone guardrails</h2>
+  <p>Every newsletter must sound like a partner, not a salesperson. The hard rules:</p>
+  <ul>
+    <li>Never the word <strong>"cheap"</strong> — use <em>affordable</em> or <em>best-value</em>.</li>
+    <li>No transactional lines like <em>"we sell X"</em> or <em>"we're telling you Y."</em> Lead with wanting to help, then be candid.</li>
+    <li>Don't overclaim in-house production for outsourced items (trade-show displays, large-format). It's fine to say local produce/print/install for things AG genuinely runs locally.</li>
+  </ul>
+  <p>Full reference: <code class="path">FAQ Friday Newsletters/FAQ Friday — Voice &amp; Tone Guide.html</code>.</p>
+
+  <h2><span class="n">07</span>Quick command cheat-sheet</h2>
+  <p>Copy-paste-style asks for the assistant:</p>
+  <ul>
+    <li><em>"Show me the Week&nbsp;NN digital newsletter."</em></li>
+    <li><em>"Bundle Week&nbsp;NN to the portal."</em></li>
+    <li><em>"Add Week&nbsp;NN to the top of the FAQ Friday list and bump the rest down."</em></li>
+    <li><em>"Compress the portal tile images / these newsletter photos."</em></li>
+    <li><em>"Re-embed the new logo in the contact card."</em></li>
+    <li><em>"Give me the portal folder to deploy to Netlify."</em></li>
+  </ul>
+
+</doc-page>
+<script src="doc-page.js"></script>
+</body>
+</html>
