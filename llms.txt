@@ -8,13 +8,14 @@ Services: vehicle wraps, building signage, banner printing, trade show displays,
 
 ## Answers
 
-- [Do branded promo products actually work?](https://YOURDOMAIN.com/faq-friday/do-promo-products-actually-work/): Yes — because people keep them, and remember you. Sources: 2026 ASI Global Advertising Impressions Study.
-- [Can better print make your business look more valuable?](https://YOURDOMAIN.com/newsletters/Week05.html): Yes. Sources: Foil & Specialty Effects Association; Clemson Sonoco Institute / FSEA; Canada Post / TrueImpact; JICMail, Q4 2024.
-- [Are trade shows worth the investment?](https://YOURDOMAIN.com/newsletters/Week04.html): Yes, because the room is full of people who can say yes. Sources: CEIR, Cost Effectiveness of Exhibition Participation; CEIR, The Spend Decision.
-- [Does my brand have to look the same everywhere?](https://YOURDOMAIN.com/newsletters/Week03.html): Yes — and that consistency is worth up to 23% in revenue. Sources: Marq (Lucidpress) Brand Consistency Report; Edelman Trust Barometer.
-- [Will a new sign actually bring in customers?](https://YOURDOMAIN.com/newsletters/Week02.html): Yes — your sign is the best-value salesperson you will ever hire. Sources: FedEx Office Signage Survey.
-- [Does a wrapped vehicle pay for itself?](https://YOURDOMAIN.com/newsletters/Week01.html): Yes. Sources: OAAA / ARD outdoor advertising study; 3M vehicle-wrap study.
+- [Do QR codes on print actually get scanned?](https://dashing-cascaron-3d4d6f.netlify.app/faq-friday/do-qr-codes-get-scanned/): More than ever — when you give people a reason. Sources: Statista, June 2021.
+- [Do branded promo products actually work?](https://dashing-cascaron-3d4d6f.netlify.app/faq-friday/do-promo-products-actually-work/): Yes — because people keep them, and remember you. Sources: 2026 ASI Global Advertising Impressions Study.
+- [Can better print make your business look more valuable?](https://dashing-cascaron-3d4d6f.netlify.app/newsletters/Week05.html): Yes. Sources: Foil & Specialty Effects Association; Clemson Sonoco Institute / FSEA; Canada Post / TrueImpact; JICMail, Q4 2024.
+- [Are trade shows worth the investment?](https://dashing-cascaron-3d4d6f.netlify.app/newsletters/Week04.html): Yes, because the room is full of people who can say yes. Sources: CEIR, Cost Effectiveness of Exhibition Participation; CEIR, The Spend Decision.
+- [Does my brand have to look the same everywhere?](https://dashing-cascaron-3d4d6f.netlify.app/newsletters/Week03.html): Yes — and that consistency is worth up to 23% in revenue. Sources: Marq (Lucidpress) Brand Consistency Report; Edelman Trust Barometer.
+- [Will a new sign actually bring in customers?](https://dashing-cascaron-3d4d6f.netlify.app/newsletters/Week02.html): Yes — your sign is the best-value salesperson you will ever hire. Sources: FedEx Office Signage Survey.
+- [Does a wrapped vehicle pay for itself?](https://dashing-cascaron-3d4d6f.netlify.app/newsletters/Week01.html): Yes. Sources: OAAA / ARD outdoor advertising study; 3M vehicle-wrap study.
 
 ## All answers on one page
 
-- [FAQ Friday — every answer](https://YOURDOMAIN.com/answers/): all questions, short answers, statistics, and sources as static text.
+- [FAQ Friday — every answer](https://dashing-cascaron-3d4d6f.netlify.app/answers/): all questions, short answers, statistics, and sources as static text.

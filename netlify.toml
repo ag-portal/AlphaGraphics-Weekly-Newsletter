@@ -26,3 +26,9 @@
   to = "/faq-friday/do-promo-products-actually-work/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/newsletters/Week07.html"
+  to = "/faq-friday/do-qr-codes-get-scanned/"
+  status = 301
+  force = true

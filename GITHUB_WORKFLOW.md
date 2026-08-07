@@ -120,11 +120,11 @@ Every `.html` file in the folder should be listed.
 ## 3b. Search + AI answer engines (AEO)
 
 **First, set the domain.** Every canonical URL, the sitemap, and the structured
-data use the placeholder `https://YOURDOMAIN.com`. One command replaces it:
+data use the placeholder `https://dashing-cascaron-3d4d6f.netlify.app`. One command replaces it:
 
 ```
 cd ~/Documents/ag-qr-portal
-grep -rl "YOURDOMAIN.com" . | xargs sed -i '' 's|https://YOURDOMAIN.com|https://your-real-domain.com|g'
+grep -rl "YOURDOMAIN.com" . | xargs sed -i '' 's|https://dashing-cascaron-3d4d6f.netlify.app|https://your-real-domain.com|g'
 ```
 
 (Drop the `''` after `-i` on Linux.) Do this before you submit anything to Google.

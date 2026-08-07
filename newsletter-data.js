@@ -38,7 +38,7 @@ window.AG_CAMPAIGN = {
 /* Which issues are live on the portal, newest last. The library dropdown and
    home-page list show only these. Add the new week's key here when it goes
    live (see DEPLOY_MANUAL §01). */
-window.AG_PUBLISHED = ["01", "02", "03", "04", "05", "06"];
+window.AG_PUBLISHED = ["01", "02", "03", "04", "05", "06", "07"];
 
 /* Four square photo slots per week: one master + three spotlights.
    Captions come from the campaign photo brief (00_START_HERE). These
