@@ -12,6 +12,8 @@ window.AG_CONTACT = {
   locale: "San Antonio, TX 78249",
   phone: "(210) 222-0580",
   tel: "2102220580",
+  // VERIFIED CORRECT — do not "fix" this. The domain really is the phone
+  // number; it is a live, working address, not a paste error from `tel`.
   email: "chelsey@2102220580.com",
   web: "alphagraphics.com/us-texas-san-antonio-us769",
   slogan: "Get Noticed. Get Business.",
@@ -135,7 +137,7 @@ window.AG_HEROSTAT = {
     { quote: "**85% of people** remember the advertiser on a promotional product they keep.", source: "2026 ASI Global Advertising Impressions Study" }
   ],
   "07": [
-    { quote: "**Zero apps** are needed to scan a code today — every modern phone reads it straight from the camera.", source: "iOS 11+ · Android 9+" }
+    { quote: "About **half of Gen Z and Millennial** consumers use a QR code at least **weekly** — 49% and 51% respectively.", source: "TEAM LEWIS Research, survey of 1,000 U.S. adults, 2024" }
   ],
   "08": [
     { quote: "You pay **once** for a sign you own — no media buy, no renewal, no four-week cycle." }
@@ -491,9 +493,13 @@ Two of those are now solved by the phone in every pocket. **Zero apps are requir
 ### What the numbers actually say
 Ignore the impressive scan rates vendors quote (18%, 26%, 38%) - every one comes from a company measuring scans of codes it sold, and they disagree wildly. **There is no independent, published scan rate for print QR codes.**
 
-What's credible: **45% of U.S. shoppers say they've used a QR code to access a marketing or promotional offer.** They scan for the offer - not for you.
+What is credible is how often people reach for one. In a survey of 1,000 U.S. adults, **about half of Gen Z and Millennial respondents said they use a QR code at least weekly** - 49% and 51% respectively - and **68% of all respondents had used one in the past year.**
 
-*Source: Statista, June 2021*
+The direction of travel is set too. **GS1 is targeting the end of 2027 to replace the traditional retail barcode with a QR code,** already testing in 48 countries representing 88% of world GDP. The code on the back of a package is becoming the same code you would put on a mailer.
+
+None of which means yours gets scanned. People scan for the offer - not for you.
+
+*Sources: TEAM LEWIS Research, survey of 1,000 U.S. adults, 2024; GS1 Sunrise 2027*
 ---
 ### One honest catch
 **A code needs a reason to scan.**
