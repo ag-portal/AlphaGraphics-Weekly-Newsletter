@@ -32,3 +32,9 @@
   to = "/faq-friday/do-qr-codes-get-scanned/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/newsletters/Week08.html"
+  to = "/faq-friday/does-big-signage-still-get-noticed/"
+  status = 301
+  force = true

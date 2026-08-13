@@ -40,7 +40,7 @@ window.AG_CAMPAIGN = {
 /* Which issues are live on the portal, newest last. The library dropdown and
    home-page list show only these. Add the new week's key here when it goes
    live (see DEPLOY_MANUAL §01). */
-window.AG_PUBLISHED = ["01", "02", "03", "04", "05", "06", "07"];
+window.AG_PUBLISHED = ["01", "02", "03", "04", "05", "06", "07", "08"];
 
 /* Four square photo slots per week: one master + three spotlights.
    Captions come from the campaign photo brief (00_START_HERE). These
@@ -140,7 +140,7 @@ window.AG_HEROSTAT = {
     { quote: "About **half of Gen Z and Millennial** consumers use a QR code at least **weekly** — 49% and 51% respectively.", source: "TEAM LEWIS Research, survey of 1,000 U.S. adults, 2024" }
   ],
   "08": [
-    { quote: "You pay **once** for a sign you own — no media buy, no renewal, no four-week cycle." }
+    { quote: "**61% of consumers** have failed to find a business because its sign was too small or unclear.", source: "Consumer Perceptions of Retail Signage, Sign Research Foundation" }
   ],
   "09": [
     { quote: "**Braced** is how most people walk in, and the room either makes the next twenty minutes easier or it doesn't." }
@@ -528,7 +528,7 @@ Trackable QR campaigns on mailers, signs, and collateral - designed and built en
 FAQ Friday is a weekly answer to the questions San Antonio business owners actually ask. Free, every Friday.`;
 
 window.AG_NEWSLETTERS_RAW["08"] = `# FAQ FRIDAY · ISSUE 08
-## Does big, bold signage still get noticed?
+## Does big, bold signage get noticed?
 Publish: Friday, August 14, 2026
 Slug: /faq-friday/does-big-signage-still-get-noticed
 Read time: ~3 min
@@ -537,6 +537,17 @@ Read time: ~3 min
 Yes - if it says one thing, in a spot where the right people actually look.
 
 Big doesn't earn attention. **Placement earns attention; clarity keeps it.** A bold sign on a wall nobody passes is a cost with no audience. Put the same sign where your customers already are - and give it one message they can read in a glance - and large format does what nothing else in your budget does: **you pay once, and it works every day after.**
+---
+### What the research actually found
+Signage is one of the few marketing questions with real academic work behind it, and the findings are blunter than you'd expect.
+
+**61% of consumers say they have failed to find a business** because its sign was too small or unclear. That is the cost nobody budgets for - not a weak impression, a customer who never arrived.
+
+On the upside, adding a single sign produced an **average sales lift of 4.75%** in the case studies - more than the lift from a larger building or longer operating hours. And **91% of consumers say a sign should be readable at a glance** by a passing motorist, which is the whole argument for one message instead of four.
+
+Two caveats worth stating plainly. The economic studies were commissioned by the sign industry's own research foundation, though the work was carried out by the University of San Diego and later the University of Cincinnati. And they date to 1997 and 2012 - old, but still the only rigorous research on the question.
+
+*Sources: The Economic Value of On-Premise Signage (University of San Diego, 1997; updated by the University of Cincinnati Economics Center, 2012); Consumer Perceptions of Retail Signage; BrandSpark / Better Homes and Gardens American Shopper Study*
 ---
 ### Start with the eyeballs, not the wall
 The usual pitch - "you already rent the lobby, so brand it" - gets it backwards. A surface you own is only worth printing if people see it. Before you pick a format, answer one question: **where is my customer already looking?** Then put the sign there.
