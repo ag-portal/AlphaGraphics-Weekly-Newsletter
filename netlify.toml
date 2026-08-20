@@ -38,3 +38,9 @@
   to = "/faq-friday/does-big-signage-still-get-noticed/"
   status = 301
   force = true
+
+[[redirects]]
+  from = "/newsletters/Week09.html"
+  to = "/faq-friday/can-your-space-change-how-people-feel/"
+  status = 301
+  force = true

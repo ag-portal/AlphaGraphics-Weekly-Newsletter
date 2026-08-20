@@ -17,7 +17,7 @@ Netlify watches your GitHub repo and redeploys automatically on every push.
    cd ~/Documents/ag-qr-portal
    git init
    git add .
-   git commit -m "Portal through Week 06"
+   git commit -m "Portal through Week 09"
    git branch -M main
    git remote add origin https://github.com/YOURNAME/ag-qr-portal.git
    git push -u origin main
@@ -31,20 +31,20 @@ From now on: **push to GitHub = site updates.** No more drag-and-drop.
 
 ---
 
-## 1. Every week (Week 07 and on)
+## 1. Every week (Week 09 and on)
 
 Each week you add ONE newsletter and flip ONE switch.
 
 1. `cd ~/Documents/ag-qr-portal` then `git pull` (gets any changes made elsewhere).
 2. Copy the new week's files in:
-   - `newsletters/Week07.html` (the page shell)
+   - `newsletters/WeekNN.html` (the page shell)
    - the new week's copy block in `newsletter-data.js`
    - new photos into `assets/masters/` and `assets/spotlight/`
 3. In `newsletter-data.js`, add the week to the published list — this is the
    switch that makes it appear on the home page and in the library dropdown:
 
    ```js
-   window.AG_PUBLISHED = ["01","02","03","04","05","06","07"];
+   window.AG_PUBLISHED = ["01","02","03","04","05","06","07","08","09"];
    ```
 
 4. Confirm the new page has the GA4 tag (see §3).
@@ -52,7 +52,7 @@ Each week you add ONE newsletter and flip ONE switch.
 
    ```
    git add .
-   git commit -m "Week 07 — QR codes"
+   git commit -m "Week 09 — Environmental graphics"
    git push
    ```
 
@@ -104,8 +104,8 @@ Property **G-FB86280RK6**. This block sits just before `</head>` on every
 </script>
 ```
 
-Currently tagged: `index.html`, `DEPLOY_MANUAL.html`, and
-`newsletters/Week01–06.html` — 8 pages.
+Currently tagged: `index.html`, `DEPLOY_MANUAL.html`, `newsletters/Week01–09.html`,
+and the three `faq-friday/<slug>/index.html` pages — 14 pages.
 
 Copy the block into each new week's page. To verify nothing was missed:
 
@@ -177,7 +177,7 @@ convention some AI crawlers read first.
 ### Descriptive URLs — Week 06 onward
 
 Weeks 01–05 are published and keep their `/newsletters/WeekNN.html` URLs
-forever. **From Week 06 the canonical URL is a descriptive slug:**
+forever. **From Week 06 every issue has a descriptive canonical slug:**
 
 ```
 /faq-friday/do-promo-products-actually-work/
@@ -196,7 +196,7 @@ How it is wired, so you can repeat it:
 - Canonical, `og:url`, `sitemap.xml`, `llms.txt`, and the `/answers/` link all
   point at the slug.
 
-For Week 07 on, use the `Slug:` line already written into that week's copy in
+For each new week, use the `Slug:` line already written into that week's copy in
 `newsletter-data.js` (e.g. `/faq-friday/do-qr-codes-get-scanned`), create the
 folder, and add a redirect block.
 
@@ -247,6 +247,40 @@ restores it instantly, no git required.
 
 ## 5. Rule of thumb
 
-One commit per week, named for the week: `Week 08 — Large format`.
+One commit per week, named for the week: `Week 10 — Business cards`.
 If a commit touches a published newsletter's **file name**, stop and
 double-check — that's the only edit that can break a link already in the wild.
+
+
+---
+
+## 6. State of this folder — Week 09
+
+Pulled forward from `AG QR Portal - Week08 Deploy`. What changed:
+
+- `newsletters/Week09.html` and `faq-friday/can-your-space-change-how-people-feel/`
+- `netlify.toml` — 301 added for Week09.html → the slug
+- `sitemap.xml`, `llms.txt`, `answers/index.html` — Week 09 entries added
+- `newsletter-data.js` — refreshed from `FAQ Friday Newsletters/`, which brings
+  **Weeks 10–16 copy along with it**. Only 01–09 are in `AG_PUBLISHED`, so the
+  unpublished weeks do not render or appear in the library. They ship in the JS
+  payload, though — if that matters, strip blocks 10–16 before pushing.
+- `assets/masters/w09.jpg` plus three Week 09 spotlights
+
+### Before you push
+
+1. **Set the real domain.** Every canonical, the sitemap, llms.txt, and the
+   structured data still use `dashing-cascaron-3d4d6f.netlify.app`. The sed
+   command in §3b replaces it everywhere in one pass.
+2. **Blog canonicals.** If the alphagraphics.com blog posts go live first, this
+   portal's canonicals should point at them instead — see
+   `Blog Rewrite/HANDOFF - Blog Posts.md` for the mapping. Do **not** 301 the
+   portal pages: their URLs are on QR codes already printed.
+3. Confirm the GA4 tag on both new pages:
+   `grep -rl "G-FB86280RK6" --include=*.html . | sort`
+
+### Week 09 copy note
+
+The pediatric office in this issue is written as a **hypothetical two-way
+comparison**, not a client job. All portal imagery is a design concept. Do not
+caption or describe any of it as work performed.
