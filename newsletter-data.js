@@ -8,7 +8,7 @@
 
 window.AG_CONTACT = {
   name: "AlphaGraphics Shavano Park",
-  street: "16101 College Oak Drive",
+  street: "16101 College Oak",
   locale: "San Antonio, TX 78249",
   phone: "(210) 222-0580",
   tel: "2102220580",
@@ -34,13 +34,40 @@ window.AG_CAMPAIGN = {
   "09": { topic: "Environmental Graphics", pillar: "marketing",  folder: "Week 09 - Environmental Graphics - 2026-08-14" },
   "10": { topic: "Collateral",             pillar: "print",      folder: "Week 10 - Collateral - 2026-08-21" },
   "11": { topic: "Window Graphics",        pillar: "signs",      folder: "Week 11 - Window Graphics - 2026-08-28" },
-  "12": { topic: "Local Partner",          pillar: "technology", folder: "Week 12 - Local Partner - 2026-09-04" },
+  "12": { topic: "Local Print Partner",   pillar: "print",      folder: "Week 12 - Local Print Partner - 2026-09-11" },
+  "13": { topic: "Sign Programs",         pillar: "signs",     folder: "Week 13 - Sign Programs - 2026-09-18" },
+  "14": { topic: "Brand Identity",         pillar: "marketing", folder: "Week 14 - Brand Identity - 2026-09-25" },
+  "15": { topic: "Direct Mail",            pillar: "marketing", folder: "Week 15 - Direct Mail - 2026-10-02" },
+  "16": { topic: "Branded Apparel",        pillar: "marketing", folder: "Week 16 - Branded Apparel - 2026-10-02" },
+  "17": { topic: "Yard & Real Estate Signs", pillar: "signs",     folder: "Week 17 - Yard - Real Estate Signs - 2026-10-16" },
+  "18": { topic: "Floor Graphics",          pillar: "signs",      folder: "Week 18 - Floor Graphics - 2026-10-23" },
+  "19": { topic: "Color Matching",          pillar: "print",      folder: "Week 19 - Color Matching - 2026-10-30" },
+  "20": { topic: "Holiday Retail Signage",  pillar: "signs",      folder: "Week 20 - Holiday Retail Signage - 2026-11-06" },
+  "21": { topic: "Branded Apparel",         pillar: "marketing",  folder: "Week 21 - Branded Apparel - 2026-11-13" },
+  "22": { topic: "Fast Turnaround",         pillar: "print",      folder: "Week 22 - Fast Turnaround - 2026-11-20" },
+  /* skip Nov 27 — Thanksgiving / Black Friday */
+  "23": { topic: "Year-End Client Gifts",   pillar: "marketing",  folder: "Week 23 - Client Gifts - 2026-12-04" },
+  "24": { topic: "Calendars & Year-End Collateral", pillar: "print", folder: "Week 24 - Calendars - 2026-12-11" },
+  "25": { topic: "Sign Maintenance & Weather", pillar: "signs",   folder: "Week 25 - Sign Maintenance - 2026-12-18" },
+  /* skip Dec 25 and Jan 1 — holidays */
+  "26": { topic: "Marketing Budget Planning", pillar: "marketing", folder: "Week 26 - Budget Planning - 2027-01-08" },
+  "27": { topic: "Rebrand vs. Refresh",     pillar: "marketing",  folder: "Week 27 - Rebrand - Refresh - 2027-01-15" },
+  "28": { topic: "Interior Office Graphics", pillar: "signs",     folder: "Week 28 - Interior Office Graphics - 2027-01-22" },
+  "29": { topic: "Print File Prep",         pillar: "technology", folder: "Week 29 - Print File Prep - 2027-01-29" },
+  "30": { topic: "Trade Show Booth Refresh", pillar: "signs",     folder: "Week 30 - Booth Refresh - 2027-02-05" },
+  "31": { topic: "Point-of-Purchase Displays", pillar: "marketing", folder: "Week 31 - POP Displays - 2027-02-12" },
+  "32": { topic: "Banner Materials & Lifespan", pillar: "signs",  folder: "Week 32 - Banner Materials - 2027-02-19" },
+  "33": { topic: "Sign Permits & Codes",    pillar: "signs",      folder: "Week 33 - Sign Permits - 2027-02-26" },
+  "34": { topic: "Grand Opening Packages",  pillar: "marketing",  folder: "Week 34 - Grand Opening - 2027-03-05" },
+  "35": { topic: "Spring Event Graphics",   pillar: "marketing",  folder: "Week 35 - Spring Events - 2027-03-12" },
+  "36": { topic: "Sustainability in Print", pillar: "print",      folder: "Week 36 - Sustainability - 2027-03-19" },
+  "37": { topic: "Digital vs. Printed Signage", pillar: "technology", folder: "Week 37 - Digital vs Print Signage - 2027-03-26" },
 };
 
 /* Which issues are live on the portal, newest last. The library dropdown and
    home-page list show only these. Add the new week's key here when it goes
    live (see DEPLOY_MANUAL §01). */
-window.AG_PUBLISHED = ["01", "02", "03", "04", "05", "06", "07", "08"];
+window.AG_PUBLISHED = ["01", "02", "03", "04", "05", "06", "07", "08", "09"];
 
 /* Four square photo slots per week: one master + three spotlights.
    Captions come from the campaign photo brief (00_START_HERE). These
@@ -59,6 +86,10 @@ window.AG_PHOTOS = {
   "10": [ {role:"Master",   cap:"Business card stack, edges"}, {role:"Spotlight",cap:"Spot UV + painted edge"}, {role:"Spotlight",cap:"Gold foil cards"}, {role:"Spotlight",cap:"Embossed folded card, olive"} ],
   "11": [ {role:"Master",   cap:"Storefront window graphics"}, {role:"Spotlight",cap:"Cut white vinyl"}, {role:"Spotlight",cap:"Frosted inverse logo"}, {role:"Spotlight",cap:"Perforated storefront decal"} ],
   "12": [ {role:"Master",   cap:"Proof in hand, real light"}, {role:"Spotlight",cap:"Paper swatches"}, {role:"Spotlight",cap:"Acrylic seating chart"}, {role:"Spotlight",cap:"Invitation flatlay"} ],
+  "13": [ {role:"Master",   cap:"Riverwalk Health wayfinding sign"}, {role:"Spotlight",cap:"ADA exam room sign, tactile + Braille"}, {role:"Spotlight",cap:"Directional floor graphic"} ],
+  "14": [ {role:"Master",   cap:"Due North dimensional sign"}, {role:"Spotlight",cap:"Coffee bag label + cup collar"}, {role:"Spotlight",cap:"Business cards + loyalty card"}, {role:"Spotlight",cap:"Sticker sheet"} ],
+  "15": [ {role:"Master",   cap:"Thornfield postcard mailer"}, {role:"Spotlight",cap:"Die-cut scratch-and-sniff coupon"}, {role:"Spotlight",cap:"Z-fold mailer, open"} ],
+  "16": [ {role:"Master",   cap:"Smoke & Cedar BBQ counter + wall sign"}, {role:"Spotlight",cap:"Menu board + trifold takeaway menu"}, {role:"Spotlight",cap:"Sauce bottle label + label roll"}, {role:"Spotlight",cap:"Branded apron, tee, and cap"} ],
 };
 
 /* Real master photography (assets/masters/wNN.png). The digital gallery
@@ -106,10 +137,38 @@ window.AG_GALLERY = {
     { src: "assets/spotlight/w8-wrap.jpg", cap: "Voltera Motors vehicle wrap" },
     { src: "assets/spotlight/w8-environmental.jpg", cap: "Environmental wall graphics" }
   ] },
-  "09": { src: "assets/masters/w09.png", client: "Cedar & Sprout Pediatric Dentistry", work: "Bound book, suite placards, and floor decal", pos: ["2% 50%","36% 50%","64% 50%","98% 50%"] },
-  "10": { src: "assets/masters/w10.png", client: "Halcyon Studio Architecture", work: "Business cards — gold foil, blind emboss, soft-touch spot UV", pos: ["2% 50%","36% 50%","64% 50%","98% 50%"] },
+  "09": { src: "assets/masters/w09.jpg", client: "Cedar & Sprout Pediatric Dentistry", work: "Suite signage, wayfinding, floor graphics, and wall murals", masterPos: "50% 40%", spots: [
+    { src: "assets/spotlight/w9-suite-sign.jpg", cap: "Dimensional suite and wayfinding signage" },
+    { src: "assets/spotlight/w9-floor-decals.jpg", cap: "Floor graphics leading to the exam rooms" },
+    { src: "assets/spotlight/w9-exam-room.jpg", cap: "Exam room wall and ceiling murals" }
+  ] },
+  "10": { src: "assets/masters/w10.png", client: "Halcyon Studio Architecture", work: "Business cards — gold foil, blind emboss, spot UV, and painted edges", masterPos: "50% 45%", spots: [
+    { src: "assets/spotlight/w10-spot-uv.png", cap: "Spot UV with a painted edge" },
+    { src: "assets/spotlight/w10-gold-foil.png", cap: "Gold foil on a soft-touch stock" },
+    { src: "assets/spotlight/w10-emboss.png", cap: "Blind emboss on olive green stock" }
+  ] },
   "11": { src: "assets/masters/w11.png", client: "Rye & Honey Artisan Bakery", work: "Frosted, cut-vinyl, and printed window graphics", pos: ["2% 50%","36% 50%","64% 50%","98% 50%"] },
-  "12": { src: "assets/masters/w12.png", client: "Wedding & event suite", work: "Acrylic seating chart, table numbers, and menus", pos: ["2% 50%","38% 50%","66% 50%","98% 50%"] },
+  "12": { src: "assets/masters/w12-local-print.png", client: "Local print partner", work: "Proof review, color matching, and installation handled in person", masterPos: "50% 50%", spots: [
+    { src: "assets/spotlight/w12-paper-swatches.jpg", cap: "Paper swatches, seen under real light" }
+  ] },
+  "13": { src: "assets/masters/w13.png", client: "Riverwalk Health", work: "Room signs, directional signage, and floor wayfinding", masterPos: "50% 45%", spots: [
+    { src: "assets/spotlight/w13-sign-set.jpg", cap: "Room, directional, and floor sign set" }
+  ] },
+  "14": { src: "assets/masters/w14.png", client: "Due North Roasters", work: "Dimensional wall sign, packaging, labels, and collateral", masterPos: "50% 40%", spots: [
+    { src: "assets/spotlight/w14-acrylic-lettering.png", cap: "Stud-mounted acrylic wall lettering" },
+    { src: "assets/spotlight/w14-coasters-cards.png", cap: "Coasters, loyalty cards, and stickers" },
+    { src: "assets/spotlight/w14-coffee-labels.png", cap: "Product labels on coffee bags" }
+  ] },
+  "15": { src: "assets/masters/w15.png", client: "Thornfield Garden Co.", work: "Direct mail, rack cards, and interior signage", masterPos: "50% 45%", spots: [
+    { src: "assets/spotlight/w15-premium-mailer.png", cap: "Mailer with gold foil, spot UV, and a scratch-and-sniff panel" },
+    { src: "assets/spotlight/w15-rack-cards.png", cap: "Rack cards for a workshop series" },
+    { src: "assets/spotlight/w15-dimensional-mural.png", cap: "Backlit dimensional lettering and vinyl wall mural" }
+  ] },
+  "16": { src: "assets/masters/w16.png", client: "Smoke & Cedar BBQ", work: "Menu boards, trifold menus, product labels, and branded apparel", masterPos: "50% 40%", spots: [
+    { src: "assets/spotlight/w16-menu-boards.png", cap: "Printed menu board and trifold menu" },
+    { src: "assets/spotlight/w16-product-labels.png", cap: "Signature sauce labels, bottled and on the roll" },
+    { src: "assets/spotlight/w16-apparel.png", cap: "Branded aprons, tees, and caps" }
+  ] },
 };
 
 /* Pull-quotes — newspaper-style highlights that lift a key line out of the
@@ -143,7 +202,7 @@ window.AG_HEROSTAT = {
     { quote: "**61% of consumers** have failed to find a business because its sign was too small or unclear.", source: "Consumer Perceptions of Retail Signage, Sign Research Foundation" }
   ],
   "09": [
-    { quote: "**Braced** is how most people walk in, and the room either makes the next twenty minutes easier or it doesn't." }
+    { quote: "Every room **does something** to the person walking into it. Most do it by accident." }
   ],
   "10": [
     { quote: "For most prospects, a business card is the **one** piece of your work they will ever hold." }
@@ -153,6 +212,18 @@ window.AG_HEROSTAT = {
   ],
   "12": [
     { quote: "**One local partner** — concept, print, and install — does what an upload-and-pray website structurally can't." }
+  ],
+  "13": [
+    { quote: "Suites turn over; the building doesn't. **One set of sign specs** is what keeps twenty tenants looking like one address." }
+  ],
+  "14": [
+    { quote: "Businesses that present their brand consistently across every touchpoint see an average **revenue lift of 23%** — same colors, same type, everywhere it appears.", source: "Marq (Lucidpress) Brand Consistency Report" }
+  ],
+  "15": [
+    { quote: "The 2027 Direct Mail Discovery promotion takes **40% off postage** on up to 5,000 pieces per mailing — for businesses that haven't mailed in two years.", source: "USPS 2027 Promotions Calendar" }
+  ],
+  "16": [
+    { quote: "Menu items given a **descriptive label** outsold the same dish under a plain name by **27%** in a six-week field study — the menu working as a salesperson, not just a list.", source: "Wansink, Painter & van Ittersum, Cornell Hotel and Restaurant Administration Quarterly, 2001" }
   ],
 };
 
@@ -592,34 +663,34 @@ FAQ Friday is a weekly answer to the questions San Antonio business owners actua
 
 window.AG_NEWSLETTERS_RAW["09"] = `# FAQ FRIDAY · ISSUE 09
 ## Can your space change how people feel?
-Publish: Friday, August 21, 2026
+Publish: Friday, August 14, 2026
 Slug: /faq-friday/can-your-space-change-how-people-feel
 Read time: ~4 min
 ---
 ### The short answer
-Most people walk into your business already braced for something.
+Every room does something to the person walking into it. Some spaces put people at ease. Some put them on edge. Most do it by accident.
 
-Not because of you. Because of the category. Nobody looks forward to the dentist. Nobody enjoys the waiting room at the clinic, or the loan office, or the shop where they're about to find out what the noise under the hood costs.
+It depends on what they came for. Nobody looks forward to the dentist, and the waiting room at the clinic or the loan office meets people already tense. A showroom or a studio starts from somewhere else entirely - curiosity, not dread.
 
-The room meets them in that state. It either makes the next twenty minutes easier or it doesn't.
+Either way the room meets them where they are. It either makes the next twenty minutes easier or it doesn't.
 
 That's what environmental graphics are actually for. Not to look expensive. **To lower the temperature.**
 ---
-### What a pediatric office taught us about every business
-Picture a children's practice reimagined as a woodland.
+### Imagine a pediatric office, two ways
+**Version one:** a beige hallway with a scale in it. Fluorescent light, laminate, a rack of old magazines.
 
-The suite sign at the door isn't a name plate - it's a trailhead. Inside, a creek runs across the floor in cut vinyl, wandering from the waiting room toward the exam rooms. Children follow it, because children follow creeks. The exam room walls are a forest - not wallpaper, a forest, with depth, sized to the room.
+**Version two:** the same square footage reimagined as a woodland. The suite sign at the door isn't a name plate - it's a trailhead. A creek runs across the floor in cut vinyl, wandering from the waiting room toward the exam rooms. Children follow it, because children follow creeks. The exam room walls are a forest - not wallpaper, a forest, with depth, sized to the room.
 
 Now think about what's happening on the floor at knee height.
 
-A four-year-old comes through that door frightened. They have been told they are going to the doctor and they know what that means. And instead of a beige hallway with a scale in it, there is a creek. Something to follow. Something to look at that is not a needle.
+A four-year-old comes through that door frightened. They have been told they are going to the doctor and they know what that means. In version one there is nothing to look at but the door they're dreading. In version two there is a creek. Something to follow. Something to look at that is not a needle.
 
-**The graphics didn't make the appointment shorter. They gave the child somewhere to put their attention while it happened.**
+**Graphics don't make the appointment shorter. They give the child somewhere to put their attention while it happens.**
 
 That's the mechanism. And once you see it, you see it everywhere.
 ---
 ### Every business has a version of this
-The pediatric office is just the clearest case. The same problem shows up wherever someone walks in slightly on edge:
+The pediatric example is just the clearest case. The same problem shows up wherever someone walks in slightly on edge:
 
 **The dentist.** Adults are afraid too. They just hide it better.
 
@@ -635,6 +706,15 @@ In every one of those rooms, the visitor is managing something. A well-designed 
 
 That is a real service, and it costs less than most people assume.
 ---
+### What the research actually shows
+The evidence here comes from healthcare, because that's where somebody bothered to measure it.
+
+A **2024 systematic review and meta-analysis** pooled 81 studies of waiting-area environments and found that ambience measurably reduces patient anxiety - with the effect landing once the wait runs past **20 minutes**. A **2023 study in the Journal of Environmental Psychology** went further: natural elements in a waiting area lowered both anxiety and **perceived wait time**, and those two together lifted how patients rated the service they'd received. Not the care. The service.
+
+Worth being straight about the limit: those studies measured plants, water, music, and daylight - not printed wall murals. What they establish is the mechanism. What a person looks at while waiting changes how the wait registers, and graphics are one of the more affordable ways to put something there.
+
+*Sources: Effect of waiting room ambience on the stress and anxiety of patients undergoing medical treatment - systematic review and meta-analysis, 2024; Nature and patient waiting, Journal of Environmental Psychology, 2023*
+---
 ### The two surfaces you're already paying for
 Here's what makes it an easy decision rather than a design decision. You are already paying rent on both of them.
 
@@ -645,15 +725,15 @@ Here's what makes it an easy decision rather than a design decision. You are alr
 Walls and floor. **Zero additional square footage.** You're paying for both whether or not they're doing anything.
 ---
 ### One honest catch
-**A nice room doesn't fix a bad visit.**
+**The room can only tell the truth about the visit.**
 
-We'd love to help you transform that space. First, the honest part: the mural is not the problem.
+We'd love to help you transform that space - and we'll be straight with you about what it will and won't do.
 
-Graphics can make a waiting room calmer. They cannot make the wait shorter, or the staff kinder, or the appointment start on time. If people leave your business feeling worse than when they arrived, a forest on the wall is an expensive way to be resented.
+Graphics can make a wait feel shorter and a room feel calmer. They can't shorten the appointment or write the greeting at the front desk. Those are yours, and they're the foundation the room is built on.
 
-**Fix the visit first. Then the room will be telling the truth.**
+**Get the visit right, and the space amplifies it.**
 
-When the space and the experience agree, the room does real work - it sets an expectation and the visit confirms it. When they disagree, people believe the visit, and the beautiful walls just make the gap more obvious.
+When the space and the experience agree, the room does real work - it sets an expectation and the visit confirms it. That's the version worth paying for, and it's why we'd rather start by asking what a good visit looks like here than by asking how big the wall is.
 ---
 ### How to think about it
 1. **Walk in through your own front door.** Actually do it. Park where a customer parks, walk the path they walk, and sit in the chair they sit in. Most owners haven't experienced their own entrance in years.
@@ -672,15 +752,17 @@ Wall murals, floor graphics, lobby signage, and branded interiors - designed, pr
 FAQ Friday is a weekly answer to the questions San Antonio business owners actually ask. Free, every Friday.`;
 
 window.AG_NEWSLETTERS_RAW["10"] = `# FAQ FRIDAY · ISSUE 10
-## Do business cards still matter in 2026?
+## Do business cards matter in 2026?
 Publish: Friday, August 28, 2026
-Slug: /faq-friday/do-business-cards-still-matter
+Slug: /faq-friday/do-business-cards-matter
 Read time: ~4 min
 ---
 ### The short answer
-Most business cards get thrown away. We help businesses make cards they're proud of, and we'll say it first: the majority of what we hand you will end up in a drawer or a trash can within the week.
+Yes - and for a reason that has nothing to do with nostalgia.
 
-That's not the argument against them. **It's the whole argument for doing them properly.**
+Most of your marketing is something people look at. A card is something they pick up, turn over, and put in a pocket. That physical moment does work a screen cannot.
+
+So the real question was never whether cards matter. **It's whether yours is worth keeping.**
 ---
 ### The one thing they'll actually hold
 Here is what a business card is, stripped of nostalgia.
@@ -705,7 +787,7 @@ There's a related line of work on weight and importance. Hand someone a heavier 
 None of that gives us a number to print on a slide, and we're not going to invent one. But it explains something every printer already knows: **people decide how they feel about a card in the two seconds before they read it.**
 ---
 ### The specs that actually matter
-Three decisions do most of the work. None of them is design.
+Four decisions do most of the work. None of them is design.
 
 **Weight.** Standard cards run 14pt. At **16pt** a card stops feeling like paper and starts feeling like an object. At 32pt - two sheets bonded, often with a colored core showing at the edge - it stops feeling like a card and starts feeling like a gift. Most people should stop at 16pt. It's the largest perceptual jump for the smallest money.
 
@@ -724,9 +806,9 @@ A considered card is a small, repeatable proof that you care about quality. Not 
 
 **The card is a sample of your standards.**
 
-So yes - most of them get thrown away. Print for the ones that don't. The card that survives is the one that felt like it cost something to make, and the person who kept it is the person who was going to call you anyway.
+You're not printing 500 cards to reach 500 people. You're printing them so you're ready for the dozen conversations that turn into work - and you don't get to know in advance which dozen those are.
 
-You are not printing 500 cards to reach 500 people. You're printing them to be ready for the twelve that matter.
+That's the case for making every one of them good.
 ---
 ### How to spec one
 1. **Start at 16pt.** If it still feels thin, go up. Most don't need to.
@@ -745,9 +827,9 @@ Business cards, letterhead, and collateral - printed in Shavano Park. Come hold 
 FAQ Friday is a weekly answer to the questions San Antonio business owners actually ask. Free, every Friday.`;
 
 window.AG_NEWSLETTERS_RAW["11"] = `# FAQ FRIDAY · ISSUE 11
-## Are window graphics worth it for a storefront?
+## What should your storefront windows be doing?
 Publish: Friday, September 4, 2026
-Slug: /faq-friday/are-window-graphics-worth-it
+Slug: /faq-friday/what-your-storefront-windows-should-do
 Read time: ~4 min
 ---
 ### The short answer
@@ -767,6 +849,15 @@ From inside, the same pane is light, privacy, and mood. It's what your customers
 **One surface. Two audiences. No additional square footage.**
 
 Every other piece of marketing you buy is an added line item. This one you already own. The only question is whether it's currently doing anything.
+---
+### The closest thing to proof we have
+Nobody has run a rigorous study on window vinyl specifically. What does exist is worth knowing, because it answers the question underneath yours.
+
+In the **University of San Diego's 1997 study for the Signage Foundation** - still the standard research in this category, and reinforced by a University of Cincinnati follow-up in 2012 - adding a building, pole, or freestanding sign raised a location's sales revenue by **5 to 15 percent**. The detail that matters for your glass: **the largest gains came from putting signage on a side of the building that previously had none**, and lower-performing locations benefited the most.
+
+That's an older study, and worth saying so. But the finding maps cleanly onto the decision in front of you. The return didn't come from a bigger sign. It came from using a surface that wasn't saying anything yet.
+
+*Source: Ellis, Johnson & Murphy, "The Economic Value of On-Premise Signage," University of San Diego, 1997, republished by the Signage Foundation; University of Cincinnati follow-up, 2012*
 ---
 ### Three ways to use it, and they're not interchangeable
 **Cut vinyl.** Individual letters and shapes, cut from solid colored film, applied directly to the glass. Your name, your hours, your phone number. It's the minimum viable window, it's the most affordable, and it leaves most of the pane clear.
@@ -868,7 +959,7 @@ Here's the structural one.
 
 AlphaGraphics is a national network of locally owned shops. The equipment, the buying power, and the color standards come from the network. The person whose name is on the door lives in San Antonio.
 
-That's not sentiment. That's why we can run a Canon Colorado and still answer the phone.
+That's not sentiment. That's why we can run production-grade equipment and still answer the phone.
 ---
 ### One honest catch
 **Accountability is the feature you can't download.**
@@ -878,17 +969,6 @@ We can't ship it, discount it, or put it in a cart. It's the thing that costs us
 A reprint. A missed event. A color that's off by enough that the sign doesn't match the truck. When those happen with a website, you eat it. When they happen with us, we eat it - because we're standing in the same city you are, and you'll be back, and we know it.
 
 **Call us when it has to be right. Or when it has to be installed.**
----
-### What we actually commit to
-Not aspirations. These are the standards:
-
-**Same-day responses, Monday through Friday.** No ticket queue. A real person.
-
-**One point of contact,** from the first quote through the finished install.
-
-**A proof you can see and approve** before anything goes on press.
-
-That's it. Three promises, small enough to keep.
 ---
 ### How to decide
 1. **Is anything riding on it?** A date, a client, an event, a first impression? If no - upload the file.
@@ -903,6 +983,250 @@ If you answered no to all five, you don't need us. Genuinely.
 Signage, wraps, displays, and collateral - designed, printed, and **installed** in Shavano Park. Come by, hold the stock, see the color under real light, and talk to the person who'll still be here when it ships.
 
 **[Come see a proof ->]**
+---
+FAQ Friday is a weekly answer to the questions San Antonio business owners actually ask. Free, every Friday.`;
+
+window.AG_NEWSLETTERS_RAW["13"] = `# FAQ FRIDAY · ISSUE 13
+## How do you keep a building's signage consistent as tenants change?
+Publish: Friday, September 18, 2026
+Slug: /faq-friday/keep-building-signage-consistent
+Read time: ~4 min
+---
+### The short answer
+With a sign program instead of one-off signs.
+
+One set of specs - substrate, finish, palette, type, mounting height - that every new tenant panel gets produced against. Suites turn over, the building doesn't, and a program is what keeps suite 210 looking like it belongs to the same address as suite 110 five years later.
+
+**And the compliance piece rides along with it.** We produce through national manufacturers whose room-sign lines are built and kept current to the ADA standards, so a property manager isn't tracking code revisions between leases.
+---
+### Signage drifts one tenant at a time
+Nobody decides to let a building look mismatched. It happens one suite at a time.
+
+A tenant leaves. The new one wants their logo up by the first of the month. Somebody orders a plaque from whoever can turn it fastest, in whatever material they had, at whatever height that installer prefers. Repeat that eleven times over six years and the corridor reads as eleven different buildings.
+
+For a property manager the cost isn't the plaques - it's that the building starts presenting as neglected to exactly the prospective tenant you're touring. **A corridor that looks maintained is a leasing asset.**
+---
+### What a sign program locks down
+Five decisions, made once, applied to every suite after.
+
+**Substrate and finish.** One material family and a non-glare finish across the building, so panels made three years apart still match on the wall.
+
+**Palette and type.** The building's colors and typeface for the frame and the wayfinding, with a defined window where a tenant's own logo and colors live. Tenants get their identity; the corridor keeps its own.
+
+**Mounting standard.** Same side of the door, same height, same fastener, every time. This is the detail that most visibly separates a program from a pile of orders.
+
+**Panel formats.** A short menu - suite ID, room ID, directional, directory strip - sized so a new tenant is choosing from a system rather than commissioning a design.
+
+**A sign schedule.** A room-by-room list held on file, so a turnover means producing a known part instead of re-solving the problem.
+---
+### Where ADA fits, and who carries it
+We're not your compliance authority, and we won't pretend to be. Here's how it actually works.
+
+Permanent room identification - restrooms, stairs, exits, and rooms that keep their function - needs raised characters and Braille, non-glare high-contrast surfaces, characters sized to reading distance, and mounting on the **latch side** of the door with tactile copy between **48" and 60"** off the floor. Directional and temporary signs follow different rules.
+
+**Those specs are built into the product lines we order from.** The national manufacturers behind them maintain their tooling and templates against the current standards, because ADA room signage is their whole business - not a sideline. That's the practical reason to buy a program rather than improvise a plaque: the compliance detail is already engineered in, and it stays current without you or us interpreting the code.
+
+Final sign-off on a building still belongs to your architect and your local authority. What we hand you is signage specified and produced to standard, plus the schedule that shows what went where.
+
+*Source: 2010 ADA Standards for Accessible Design, §703*
+---
+### Compliance and wayfinding are two different jobs
+Compliance keeps you out of trouble. Wayfinding gets a nervous visitor to the right door.
+
+A building can be *fully compliant and still impossible to navigate* - every plaque correct, and no one can find the lab. The plaques answer "is this the right room?" once you're already standing at it. They do nothing for the person standing in the lobby trying to decide which hallway to start down. That's the whole difference for a clinic, a shared medical building, or any office where the front desk fields the same "where's the restroom" question all day.
+---
+### One honest catch
+**A compliant sign and a findable building are not the same purchase.**
+
+We'll say it plainly: bolting a correct plaque next to every door checks the legal box and still leaves people lost.
+
+Compliance is a checklist. Wayfinding is a design problem - it starts with the route a first-time visitor takes, not with the sign at the end of it. If you only buy the plaques, buy them knowing that's what you bought.
+---
+### How to set one up
+1. **Walk in as a stranger.** Park where a first-time visitor parks and try to find one specific suite. Every place you hesitate is a gap in the program.
+2. **Inventory what's already on the walls.** Photograph every sign in the building. The mismatches and the missing rooms both show up fast.
+3. **Write the specs down once.** Substrate, finish, colors, type, mounting height, panel formats. One page, held on file, handed to whoever produces the next panel.
+4. **Build the sign schedule.** A room-by-room list before anything is produced, so a turnover is a reorder rather than a project.
+5. **Decide what tenants control.** Their logo, their colors, inside a defined window. Everything outside that window belongs to the building.
+
+Often the first fix is smaller than a resign - moving a few plaques to the correct side of the door, or swapping a glossy finish for a matte one so the corridor matches.
+---
+### Let's build your sign program
+Suite and room identification, directories, wayfinding, and floor graphics - specified, produced through manufacturers who build to current ADA standards, and installed from Shavano Park. We'll walk the building, inventory what's there, and write the one page that keeps the next ten tenants consistent.
+
+**[Book a free building walk-through ->]**
+---
+FAQ Friday is a weekly answer to the questions San Antonio business owners actually ask. Free, every Friday.`;
+
+window.AG_NEWSLETTERS_RAW["14"] = `# FAQ FRIDAY · ISSUE 14
+## What do you get when you buy a brand identity?
+Publish: Friday, September 25, 2026
+Slug: /faq-friday/what-do-you-get-with-a-brand-identity
+Read time: ~4 min
+---
+### The short answer
+A logo is one file. A brand identity is a system that has to survive a coffee bag, a cup sleeve, a loyalty card, and a wall sign without falling apart - and that system, not the artwork, is what you're actually paying for.
+
+If a "logo project" only hands you a PNG, you didn't get an identity. You got a picture.
+---
+### One mark, doing six different jobs
+Look at everywhere a logo actually has to appear in a real business: a dimensional sign on the wall, a printed label on a bag, a foil sticker the size of a quarter, a business card, a loyalty card, a cup sleeve.
+
+Each of those is a different size, material, and viewing distance - and **the same mark has to read clearly at all of them.** A logo that looks sharp on a monitor can turn into a smudge at sticker size, or lose its fine detail engraved into a sign. A real identity system includes a simplified mark built for the smallest formats, because the alternative is redesigning your logo the first time it doesn't fit.
+---
+### The parts nobody photographs
+The mark gets the attention. The rulebook behind it does the work.
+
+A finished identity package includes exact color builds (Pantone, CMYK, and hex - not "that shade of blue"), the paired typefaces, the minimum clear space around the mark, and a one-page do/don't sheet. None of that is exciting to look at, and all of it is why your business card, your sign, and your packaging can be produced by three different vendors and still match.
+
+Businesses that present their brand consistently across every touchpoint see an average **revenue lift of 23%** - same colors, same type, everywhere it appears.
+
+*Source: Marq (Lucidpress) Brand Consistency Report*
+---
+### One honest catch
+**We're not going to hand you the "80% more memorable" color statistic.**
+
+You'll see it everywhere: "color increases brand recognition by 80%." It traces back to a 1990s workplace study about reading charts and printouts, not branding, and the number has been repeated so many times it now sounds like research. It isn't, cleanly.
+
+What's actually true, and duller: **consistency, repeated often enough, is what makes a mark recognizable.** There's no shortcut number for that - just the same colors and the same mark showing up, correctly, everywhere your customer looks.
+---
+### How to brief one
+1. **List every place your mark has to live** - sign, packaging, cards, uniforms, social - before anyone designs anything. That list sets the real scope.
+2. **Ask for a simplified version up front,** built for the smallest use (a sticker, a favicon), not adapted from the full logo after the fact.
+3. **Get the rulebook, not just the art.** Colors in three formats, one clear-space rule, one wrong-use example. A one-page PDF is enough.
+4. **Pick two colors you can commit to everywhere,** not a palette of six that only appears together on the mood board.
+5. **Roll it out on your highest-visibility piece first** - usually the sign or the storefront - so the investment is visible immediately.
+
+Often the right scope is smaller than a full rebrand: a refined mark, a locked color build, and a one-page usage guide. That's a real, more affordable starting point.
+---
+### Let's build a mark that scales
+Logos, signage, packaging, and the usage guide that ties them together - designed in Shavano Park. We'll show you a system in progress, not just a finished picture.
+
+**[See a brand system in progress ->]**
+---
+FAQ Friday is a weekly answer to the questions San Antonio business owners actually ask. Free, every Friday.`;
+
+window.AG_NEWSLETTERS_RAW["15"] = `# FAQ FRIDAY · ISSUE 15
+## How do you pay less postage on the same mailer?
+Publish: Friday, October 2, 2026
+Slug: /faq-friday/how-to-pay-less-postage
+Read time: ~4 min
+---
+### The short answer
+You register for a USPS promotion before you mail.
+
+The Postal Service discounts postage - usually **5%**, occasionally far more - on mailpieces that do specific things: carry a technology, follow up on an earlier mailing, use certified paper. Same list, same piece, less postage. **The hard part is never qualifying. It's the calendar.**
+
+Every promotion has a registration window, and there is no retroactive claim.
+---
+### What's open right now
+Three promotions are live as you read this, and all three close December 31.
+
+**First-Class Mail Advertising - 5%.** Running September 1 through December 31, 2026 on First-Class letters, cards, and flats. If you send invoices, statements, or announcements First-Class, this is the simplest discount on the board.
+
+**Continuous Contact - 5% on the follow-ups.** No discount on the first mailing, but every subsequent piece to the same address earns 5%, as long as it builds on the first rather than repeating it. Marketing Mail letters and flats, through December 31.
+
+**Integrated Technology - 5%.** You pick your own consecutive six-month window. The piece has to carry NFC, video-in-print, augmented or virtual reality, voice-assistant integration, mobile shopping, or AI.
+
+Then stack the add-ons. **Informed Delivery adds 1%** (plus another 0.5% for electronic documentation), and the **Sustainability add-on adds 1%** when your paper comes from a certified source. Both run all year, and both require you to claim a promotion first.
+
+*Source: USPS Promotions & Incentives, 2026 Promotions Calendar*
+---
+### Two registration windows open within weeks
+The 2027 calendar is already published, and two of its windows open almost immediately.
+
+**October 15** - registration opens for the 2027 Tactile, Sensory & Interactive promotion, which runs January 1 through June 30, 2027. Texture, coatings, foil, scent, sound, special visual effects. It pays **3% at the basic tier and 5% at the advanced tier.**
+
+**November 15** - registration opens for 2027 Integrated Technology, again **5%**, again a six-month window you choose yourself.
+
+Registering costs nothing and doesn't commit you to mailing anything. If there's a chance you'll mail in the first half of 2027, register in the window and decide later.
+
+*Source: USPS 2027 Promotions Calendar*
+---
+### The one worth planning a year around
+**2027 Direct Mail Discovery: 40% off postage.**
+
+From April 1 to September 30, 2027, a company that hasn't mailed in the past two years can take **40% off up to 5,000 pieces per mailing** - and a genuinely new mailer can take 40% off up to 100,000 pieces across the promotion. Registration opens February 15, 2027.
+
+That's eight times the size of a standard promotion discount, and it exists specifically for businesses that have never tried mail. If you've been curious whether direct mail works for your shop, 2027 is the cheapest year you will ever get to find out.
+
+*Source: USPS 2027 Promotions Calendar*
+---
+### One honest catch
+**The discount is on postage only - and only if you register first.**
+
+It does nothing for your print cost. And the percentages are modest in isolation: 5% of postage on a two-thousand-piece drop is real money, but it is not the reason to run a campaign.
+
+**Register before the mail date or you pay full postage on a piece that would have qualified.** There is no backdating, no appeal, and no partial credit. We have watched mailers miss a discount they had already earned on the artwork because nobody filed in time.
+
+So treat promotions as a rebate on a mailing you were going to send anyway - never as the reason to design a piece you didn't need.
+---
+### How to use them
+1. **Start with the campaign, not the discount.** Decide the offer, the list, and the timing first. A 5% postage rebate cannot rescue a mailer nobody wanted.
+2. **Check what your piece already qualifies for.** Most owners are surprised - a QR code routing to mobile shopping, a textured coating, a second touch to the same household. You may be one form away from a discount.
+3. **Register before the mail date,** through the Business Customer Gateway. This is the step that gets missed.
+4. **Stack the add-ons.** Informed Delivery and Sustainability layer on top of the base promotion for another 1% each.
+5. **Put October 15 and November 15 on your calendar** for the 2027 windows, and February 15 if Direct Mail Discovery applies to you.
+---
+### Let's get your mailing registered
+Direct mail and EDDM - design, list, print, and USPS hand-off from Shavano Park. We track which promotions are open, tell you plainly whether your piece qualifies, and handle the registration before the drop.
+
+**[Plan a mailing ->]**
+---
+FAQ Friday is a weekly answer to the questions San Antonio business owners actually ask. Free, every Friday.`;
+
+window.AG_NEWSLETTERS_RAW["16"] = `# FAQ FRIDAY · ISSUE 16
+## Does your menu sell the food, or just list it?
+Publish: Friday, October 9, 2026
+Slug: /faq-friday/does-your-menu-sell-the-food
+Read time: ~4 min
+---
+### The short answer
+A menu is the highest-ROI print piece in a restaurant - it's the one thing every paying customer reads right before they spend money.
+
+Most menus just report what's available. The ones that sell describe it.
+---
+### The silent salesperson
+In a six-week field study, the same dishes sold **27% more often** when the menu gave them a short, sensory description instead of a plain name - "tender, slow-smoked brisket" instead of "brisket."
+
+That's an older study, and worth saying so - but nobody's turned up numbers that contradict it since, and the mechanism is simple enough to trust: **a description sells; a name only informs.** Your menu is doing one job or the other on every line.
+
+*Source: Wansink, Painter & van Ittersum, Cornell Hotel and Restaurant Administration Quarterly, 2001*
+---
+### Two menus, two different jobs
+The board on the wall and the trifold on the table aren't the same piece with a different shape - they're solving different problems.
+
+**The wall board** gets read from the ordering line, fast, often by someone who hasn't decided yet. It has one job: **legible categories and prices at a glance.** Long descriptions are wasted here - there isn't time to read them.
+
+**The take-home trifold** gets read at the table, slower, by someone who's already committed to sitting down. This is where the descriptive language earns its keep - it's the piece with room for "tender, juicy, perfectly smoked," and the time for a customer to actually read it.
+
+Print each for how it's actually read, not as a matching pair that happens to be different sizes.
+---
+### One brand, showing up everywhere the customer looks
+The board, the trifold, the sauce label on the shelf, and the apron on the person taking the order are four different products doing the same job: telling the same story every time someone looks up.
+
+That consistency isn't decoration. **It's what makes a regular trust a new item on the board** the same way they already trust the bottle they buy on the way out - same mark, same colors, same voice, everywhere it shows up.
+---
+### One honest catch
+**A better-written menu can't save a dish nobody wants.**
+
+Descriptive language works because it's true - it sells the brisket that's actually good, faster. It won't rescue a slow-selling side no matter how many adjectives you add, and a board where every single item gets the sensory treatment stops reading as selling and starts reading as trying too hard.
+
+**Pick your best three to five items and give them the language. Let the rest just be legible.**
+---
+### How to spec it
+1. **Pick 3 to 5 hero items** for descriptive copy - the dishes you actually want to sell more of, not everything on the menu.
+2. **Size the wall board for the ordering line,** not the table - test the type size from where people actually stand.
+3. **Give the trifold the detail the board can't hold** - ingredients, a story, the thing that makes a customer choose you over the place next door.
+4. **Lock one palette and one typeface** across the board, the trifold, the labels, and the merch before printing any of them.
+5. **Plan for price changes before you print** - removable letters for the board, a reprint schedule for the trifold - so an update doesn't mean redesigning everything at once.
+
+Often the fastest win is the cheapest one: rewriting five lines on a menu you already have, before reprinting anything.
+---
+### Let's print a menu that sells
+Menu boards, trifolds, product labels, and branded apparel - designed and produced in Shavano Park, built as one system instead of four separate print jobs.
+
+**[Get a menu system built ->]**
 ---
 FAQ Friday is a weekly answer to the questions San Antonio business owners actually ask. Free, every Friday.`;
 
