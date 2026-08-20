@@ -1,65 +1,67 @@
-# Week 09 — two files still to upload
+# Week 09 — 6 files to upload
 
-Your push worked. The repo is at `059225a5` and 108 of the 110 files match your
-local folder byte-for-byte, including all four converted Week 09 JPGs, both new
-HTML pages, `netlify.toml`, `llms.txt`, and `answers/index.html`.
+Keep the folder structure. `newsletters/Week09.html` goes in `newsletters/`, the
+`faq-friday/` file in its slug folder; the other four sit at the repo root.
 
-Two files did not make it. Upload just these two — not the whole folder.
+| file | change |
+|---|---|
+| `index.html` | **the fix** — library list now generated from the data; Issue 09 card; stray `</button>` removed |
+| `newsletter-data.js` | Week 09 `Publish:` corrected to August 21, 2026 |
+| `sitemap.xml` | Week 09 `lastmod` → 2026-08-21 |
+| `newsletters/Week09.html` | six date references → August 21 |
+| `faq-friday/can-your-space-change-how-people-feel/index.html` | six date references → August 21 |
+| `GITHUB_WORKFLOW.md` | documents the new weekly process |
 
-| file | repo has | should be |
-|---|---|---|
-| `newsletter-data.js` | 69,258 bytes | 97,284 bytes |
-| `sitemap.xml` | 1,887 bytes | 2,089 bytes |
+Commit message: `Week 09 — data-driven library, date corrected to Aug 21`
 
-## Why these two matter more than the rest
+Netlify redeploys in about 30 seconds. Hard-refresh (Ctrl+Shift+R) — the old
+home page will otherwise persist in your browser cache.
 
-The repo's `newsletter-data.js` is the version from before the Week 09 work. It
+## Why Week 09 was invisible
 
-- ends `AG_PUBLISHED` at `"08"`, so Week 09 does not appear on the home page or
-  in the library dropdown, and
-- still points at `assets/masters/w09.png` and the three `w9-*.png` spotlights,
-  which no longer exist in the repo — only the `.jpg` versions were uploaded.
+`newsletter-data.js` was never the problem. The home page **never read it**. Every
+issue card was hardcoded in `index.html`, which is a 1.5 MB self-contained bundle
+whose Week 09 copy was byte-identical to Week 08's. Flipping `AG_PUBLISHED` could
+not have worked.
 
-So Week 09 is currently invisible, and would show four broken images if it were
-switched on. `sitemap.xml` is missing its Week 09 entry.
+## The permanent fix
 
-## Upload
+`index.html` now builds the FAQ Friday library from the data at page load:
 
-On github.com, in `ag-portal/AlphaGraphics-Weekly-Newsletter`:
+- `AG_PUBLISHED` decides which issues appear, newest first
+- `AG_NEWSLETTERS_RAW["NN"]` supplies the question (`## …`), the date
+  (`Publish: …`), and the link (`Slug: …`)
+- `AG_CAMPAIGN["NN"]` supplies the topic label and the pill colour (`pillar`)
 
-1. Click `newsletter-data.js` in the file list.
-2. Pencil icon (Edit this file) — or the **⋯** menu → Upload to replace.
-3. Select all, paste this folder's `newsletter-data.js`, commit.
-4. Repeat for `sitemap.xml`.
+**From Week 10 on, adding a week to `AG_PUBLISHED` is genuinely all it takes.** No
+`index.html` edit.
 
-Or drag both files onto the repo root from the **Add file → Upload files**
-screen; matching names replace in place.
+Two details this surfaced, both now correct because they come from the data
+rather than from me:
 
-Commit message: `Week 09 — publish switch and sitemap entry`
+- Week 09's pill is **Marketing**, not Signs — `pillar: "marketing"` in
+  `AG_CAMPAIGN`. My earlier hand-written card had it wrong.
+- Issue 06's card now links to its slug rather than `newsletters/Week06.html`.
+  Same destination, since `netlify.toml` already 301s one to the other, but the
+  canonical URL is now the one in the link.
 
-## On the "too many files" limit
+The old hardcoded cards remain in the file as a no-JavaScript fallback. They are
+not what visitors see. They will drift out of date and that is fine — the live
+list is generated.
 
-GitHub's web uploader caps a single drag at 100 files, and this site is 112. You
-will hit it again on any full-folder upload. Two ways around it:
+## What it cannot check
 
-- **Upload only what changed.** Almost every week that is under ten files — one
-  newsletter HTML, one slug folder, four images, five social posts, and the four
-  files that get edited. That is what this folder does.
-- **Use the command line instead**, which has no file-count limit. The sequence
-  in `GITHUB_WORKFLOW.md` §1 is the one-time cost, and `git add -A` afterwards
-  handles any number of files, including deletions — which the web uploader
-  cannot do at all. The four Week 09 PNGs are still in the repo history but were
-  correctly absent from this push, so nothing is stale there.
+That `faq-friday/<slug>/index.html` exists. Publish a week without creating its
+folder and the card links to a 404. Creating the folder is still a manual step
+each week, per `GITHUB_WORKFLOW.md` §3b.
 
-## After uploading
+## Two housekeeping items
 
-Netlify redeploys in about 30 seconds. Then check:
-
-- `/` — the Week 09 card appears in the library
-- `/faq-friday/can-your-space-change-how-people-feel/` — all four images load
-- `/sitemap.xml` — the Week 09 URL is listed
-
-Still outstanding and unrelated: every canonical, the sitemap, `llms.txt`, and
-the structured data use the placeholder host
-`dashing-cascaron-3d4d6f.netlify.app`. The `sed` command in `GITHUB_WORKFLOW.md`
-§3b replaces it in one pass. Do that before submitting to Search Console.
+- **Delete `READ ME.md` from the repo root.** My earlier fix folder's readme got
+  uploaded and is now publicly served on the live site.
+- **The placeholder domain is still everywhere** — canonicals, sitemap,
+  `llms.txt`, and all structured data use
+  `dashing-cascaron-3d4d6f.netlify.app`. The `sed` one-liner in
+  `GITHUB_WORKFLOW.md` §3b replaces it in one pass. Worth doing before you
+  submit anything to Search Console, because every canonical currently points at
+  a domain you do not intend to rank.

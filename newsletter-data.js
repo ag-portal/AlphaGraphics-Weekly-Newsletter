@@ -663,7 +663,7 @@ FAQ Friday is a weekly answer to the questions San Antonio business owners actua
 
 window.AG_NEWSLETTERS_RAW["09"] = `# FAQ FRIDAY · ISSUE 09
 ## Can your space change how people feel?
-Publish: Friday, August 14, 2026
+Publish: Friday, August 21, 2026
 Slug: /faq-friday/can-your-space-change-how-people-feel
 Read time: ~4 min
 ---

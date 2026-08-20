@@ -41,11 +41,33 @@ Each week you add ONE newsletter and flip ONE switch.
    - the new week's copy block in `newsletter-data.js`
    - new photos into `assets/masters/` and `assets/spotlight/`
 3. In `newsletter-data.js`, add the week to the published list — this is the
-   switch that makes it appear on the home page and in the library dropdown:
+   switch that makes it appear on the home page and in the library list:
 
    ```js
    window.AG_PUBLISHED = ["01","02","03","04","05","06","07","08","09"];
    ```
+
+   **The home page card list is generated from this array.** As of Week 09,
+   `index.html` reads `AG_PUBLISHED`, `AG_NEWSLETTERS_RAW`, and `AG_CAMPAIGN`
+   and builds the FAQ Friday library itself — issue number, question, topic,
+   date, and pill colour all come from the data. You no longer edit
+   `index.html` to add a week.
+
+   It takes these from the week's copy block, so make sure they are right:
+   - `## <the question>` — the card headline
+   - `Publish: Friday, <Month D, YYYY>` — the card date
+   - `Slug: /faq-friday/<slug>` — the card link, for Week 06 and later
+   - `AG_CAMPAIGN["NN"].topic` and `.pillar` — the topic label and pill colour
+     (`pillar` must be one of `signs`, `print`, `marketing`, `technology`)
+
+   The old hardcoded cards are still in `index.html` as a no-JavaScript
+   fallback. They are not what visitors see, and they do not need updating each
+   week — but they will go stale, so refresh them occasionally if the no-JS view
+   matters to you.
+
+   One thing the generator cannot check: that
+   `faq-friday/<slug>/index.html` actually exists. Publish a week without
+   creating its folder and the card will link to a 404.
 
 4. Confirm the new page has the GA4 tag (see §3).
 5. Commit and push:
@@ -256,31 +278,49 @@ double-check — that's the only edit that can break a link already in the wild.
 
 ## 6. State of this folder — Week 09
 
-Pulled forward from `AG QR Portal - Week08 Deploy`. What changed:
+### Week 09 went live in two attempts — what went wrong
 
-- `newsletters/Week09.html` and `faq-friday/can-your-space-change-how-people-feel/`
-- `netlify.toml` — 301 added for Week09.html → the slug
-- `sitemap.xml`, `llms.txt`, `answers/index.html` — Week 09 entries added
-- `newsletter-data.js` — refreshed from `FAQ Friday Newsletters/`, which brings
-  **Weeks 10–16 copy along with it**. Only 01–09 are in `AG_PUBLISHED`, so the
-  unpublished weeks do not render or appear in the library. They ship in the JS
-  payload, though — if that matters, strip blocks 10–16 before pushing.
-- `assets/masters/w09.jpg` plus three Week 09 spotlights
+The first push looked fine but Week 09 never appeared on the home page. The
+cause was not the data file: `index.html` **hardcoded every issue card** and
+never read `AG_PUBLISHED` at all. It is also a 1.5 MB self-contained bundle, so
+its real markup sits inside it as an escaped string — and the Week 09 copy was
+byte-identical to Week 08's.
 
-### Before you push
+Fixed properly this time: the library list is generated from the data, so the
+failure cannot recur. Also corrected in the same pass:
 
-1. **Set the real domain.** Every canonical, the sitemap, llms.txt, and the
-   structured data still use `dashing-cascaron-3d4d6f.netlify.app`. The sed
-   command in §3b replaces it everywhere in one pass.
-2. **Blog canonicals.** If the alphagraphics.com blog posts go live first, this
-   portal's canonicals should point at them instead — see
-   `Blog Rewrite/HANDOFF - Blog Posts.md` for the mapping. Do **not** 301 the
-   portal pages: their URLs are on QR codes already printed.
-3. Confirm the GA4 tag on both new pages:
-   `grep -rl "G-FB86280RK6" --include=*.html . | sort`
+- The four Week 09 images were PNGs totalling **9.14 MB**, twelve times the
+  payload of any previous week. Converted to JPG at quality 0.86 — **1.11 MB**,
+  same dimensions. Weeks 01–08 masters are JPGs at about 0.2 MB; keep it that way.
+- Week 09's date was **August 14** in four places and is now **August 21**,
+  matching the weekly cadence. Issue 08 keeps August 14.
+- A stray duplicate `</button>` in the library markup.
+
+### Editing index.html by hand
+
+Avoid it if you can. If you must: the markup lives in the
+`<script type="__bundler/template">` block as a JSON string. Extract it, edit,
+then re-serialise with every `</` written as `<\/` — a plain
+`JSON.stringify` emits a literal `</script>` that closes the tag early and
+corrupts the file silently.
+
+### Uploading
+
+The site is 112 files and GitHub's web uploader caps a single drag at 100. Upload
+only what changed, or use the command line — which is also the only way to record
+a deletion.
 
 ### Week 09 copy note
 
 The pediatric office in this issue is written as a **hypothetical two-way
 comparison**, not a client job. All portal imagery is a design concept. Do not
 caption or describe any of it as work performed.
+
+### Before you push
+
+1. **Set the real domain.** Every canonical, the sitemap, llms.txt, and the
+   structured data still use `dashing-cascaron-3d4d6f.netlify.app`. The sed
+   command in §3b replaces it everywhere in one pass.
+2. Confirm the GA4 tag on any new page:
+   `grep -rl "G-FB86280RK6" --include=*.html . | sort`
+3. Delete the stray `READ ME.md` sitting in the repo root — it is publicly served.
