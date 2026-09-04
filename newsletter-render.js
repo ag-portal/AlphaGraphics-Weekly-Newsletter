@@ -29,7 +29,12 @@
     var frag = document.createDocumentFragment();
     (runs || []).forEach(function (r) {
       var node;
-      if (r.b) {
+      if (r.h) {
+        node = document.createElement("a");
+        node.href = r.h; node.target = "_blank"; node.rel = "noopener";
+        node.textContent = r.t;
+      }
+      else if (r.b) {
         if (CURRENT_FORMAT === "digital" && isStatRun(r.t)) { node = document.createElement("span"); node.className = "nl-stat"; }
         else { node = document.createElement("strong"); }
         node.textContent = r.t;
@@ -205,7 +210,7 @@
     if (gm && gm.src) {
       var photo = el("div", "nl-mh-photo");
       var pimg = el("img");
-      pimg.alt = (gm.client || "") + " — featured work"; pimg.loading = "lazy";
+      pimg.alt = (gm.work || gm.client || "") + " — design concept for a fictional company"; pimg.loading = "lazy";
       var applyFit = function () {
         var r = (pimg.naturalWidth && pimg.naturalHeight) ? pimg.naturalWidth / pimg.naturalHeight : 1.8;
         if (r < 1.15) {
@@ -369,7 +374,7 @@
     if (!g) return null;
     var band = el("div", "nl-gallery");
     var head = el("div", "nl-gallery-head");
-    head.innerHTML = '<p class="nl-gallery-tag">See the work</p>' +
+    head.innerHTML = '<p class="nl-gallery-tag">Design concepts</p>' +
       "<h4>" + esc(g.client) + "</h4>" +
       '<p class="nl-gallery-sub">' + esc(g.work) + "</p>";
     band.appendChild(head);
@@ -377,10 +382,10 @@
     // Preferred: distinct spotlight images. Fallback: frame the master into tiles.
     var tiles = [];
     if (g.spots && g.spots.length) {
-      tiles = g.spots.map(function (sp) { return { src: ROOT + sp.src, pos: sp.pos || "50% 50%", cap: sp.cap || (g.client + " — " + g.work) }; });
+      tiles = g.spots.map(function (sp) { return { src: ROOT + sp.src, pos: sp.pos || "50% 50%", cap: sp.cap || (g.work + " — design concept") }; });
     } else {
       var src = ROOT + g.src;
-      var cap = g.client + " — " + g.work;
+      var cap = g.work + " — design concept";
       (g.pos || ["2% 50%","36% 50%","64% 50%","98% 50%"]).forEach(function (pos) {
         tiles.push({ src: src, pos: pos, cap: cap });
       });

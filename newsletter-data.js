@@ -32,11 +32,11 @@ window.AG_CAMPAIGN = {
   "07": { topic: "QR Codes",               pillar: "technology", folder: "Week 07 - Print - Digital - 2026-07-31" },
   "08": { topic: "Large Format",           pillar: "signs",      folder: "Week 08 - Large Format - 2026-08-07" },
   "09": { topic: "Environmental Graphics", pillar: "marketing",  folder: "Week 09 - Environmental Graphics - 2026-08-14" },
-  "10": { topic: "Collateral",             pillar: "print",      folder: "Week 10 - Collateral - 2026-08-21" },
-  "11": { topic: "Window Graphics",        pillar: "signs",      folder: "Week 11 - Window Graphics - 2026-08-28" },
-  "12": { topic: "Local Print Partner",   pillar: "print",      folder: "Week 12 - Local Print Partner - 2026-09-11" },
-  "13": { topic: "Sign Programs",         pillar: "signs",     folder: "Week 13 - Sign Programs - 2026-09-18" },
-  "14": { topic: "Brand Identity",         pillar: "marketing", folder: "Week 14 - Brand Identity - 2026-09-25" },
+  "10": { topic: "Collateral",             pillar: "print",      folder: "Week 10 - Collateral - 2026-09-04" },
+  "11": { topic: "Window Graphics",        pillar: "signs",      folder: "Week 11 - Window Graphics - 2026-09-11" },
+  "12": { topic: "Local Print Partner",   pillar: "print",      folder: "Week 12 - Local Print Partner - 2026-09-18" },
+  "13": { topic: "Sign Programs",         pillar: "signs",     folder: "Week 13 - Sign Programs - 2026-09-25" },
+  "14": { topic: "Brand Identity",         pillar: "marketing", folder: "Week 14 - Brand Identity - 2026-10-02" },
   "15": { topic: "Direct Mail",            pillar: "marketing", folder: "Week 15 - Direct Mail - 2026-10-02" },
   "16": { topic: "Branded Apparel",        pillar: "marketing", folder: "Week 16 - Branded Apparel - 2026-10-02" },
   "17": { topic: "Yard & Real Estate Signs", pillar: "signs",     folder: "Week 17 - Yard - Real Estate Signs - 2026-10-16" },
@@ -67,7 +67,7 @@ window.AG_CAMPAIGN = {
 /* Which issues are live on the portal, newest last. The library dropdown and
    home-page list show only these. Add the new week's key here when it goes
    live (see DEPLOY_MANUAL §01). */
-window.AG_PUBLISHED = ["01", "02", "03", "04", "05", "06", "07", "08", "09"];
+window.AG_PUBLISHED = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"];
 
 /* Four square photo slots per week: one master + three spotlights.
    Captions come from the campaign photo brief (00_START_HERE). These
@@ -142,10 +142,10 @@ window.AG_GALLERY = {
     { src: "assets/spotlight/w9-floor-decals.jpg", cap: "Floor graphics leading to the exam rooms" },
     { src: "assets/spotlight/w9-exam-room.jpg", cap: "Exam room wall and ceiling murals" }
   ] },
-  "10": { src: "assets/masters/w10.png", client: "Halcyon Studio Architecture", work: "Business cards — gold foil, blind emboss, spot UV, and painted edges", masterPos: "50% 45%", spots: [
-    { src: "assets/spotlight/w10-spot-uv.png", cap: "Spot UV with a painted edge" },
-    { src: "assets/spotlight/w10-gold-foil.png", cap: "Gold foil on a soft-touch stock" },
-    { src: "assets/spotlight/w10-emboss.png", cap: "Blind emboss on olive green stock" }
+  "10": { src: "assets/masters/w10.jpg", client: "Halcyon Studio Architecture", work: "Business cards — gold foil, blind emboss, spot UV, and painted edges", masterPos: "50% 45%", spots: [
+    { src: "assets/spotlight/w10-spot-uv.jpg", cap: "Spot UV with a painted edge" },
+    { src: "assets/spotlight/w10-gold-foil.jpg", cap: "Gold foil on a soft-touch stock" },
+    { src: "assets/spotlight/w10-emboss.jpg", cap: "Blind emboss on olive green stock" }
   ] },
   "11": { src: "assets/masters/w11.png", client: "Rye & Honey Artisan Bakery", work: "Frosted, cut-vinyl, and printed window graphics", pos: ["2% 50%","36% 50%","64% 50%","98% 50%"] },
   "12": { src: "assets/masters/w12-local-print.png", client: "Local print partner", work: "Proof review, color matching, and installation handled in person", masterPos: "50% 50%", spots: [
@@ -205,7 +205,7 @@ window.AG_HEROSTAT = {
     { quote: "Every room **does something** to the person walking into it. Most do it by accident." }
   ],
   "10": [
-    { quote: "For most prospects, a business card is the **one** piece of your work they will ever hold." }
+    { quote: "For most prospects, a business card is the **only** piece of your work they will ever touch." }
   ],
   "11": [
     { quote: "**100% of your storefront glass** is marketing space you already pay rent for." }
@@ -753,82 +753,100 @@ FAQ Friday is a weekly answer to the questions San Antonio business owners actua
 
 window.AG_NEWSLETTERS_RAW["10"] = `# FAQ FRIDAY · ISSUE 10
 ## Do business cards matter in 2026?
-Publish: Friday, August 28, 2026
+Publish: Friday, September 4, 2026
 Slug: /faq-friday/do-business-cards-matter
-Read time: ~4 min
+Read time: ~5 min
 ---
 ### The short answer
-Yes - and for a reason that has nothing to do with nostalgia.
+Yes, and for a reason that has nothing to do with nostalgia.
 
-Most of your marketing is something people look at. A card is something they pick up, turn over, and put in a pocket. That physical moment does work a screen cannot.
+Almost everything else in your marketing is something people look at. A card is something they pick up, turn over, and put in a pocket. For most prospects it is the only piece of your work they will ever hold in their hands.
 
-So the real question was never whether cards matter. **It's whether yours is worth keeping.**
+That means the question was never whether cards still matter. **It's whether yours is worth keeping.**
 ---
-### The one thing they'll actually hold
-Here is what a business card is, stripped of nostalgia.
+### Imagine the same handshake, two ways
+**Version one:** a 14pt card, one side printed, the other blank, with every way to reach you on the front. Everything a person needs is on it, and it does the job it was made for.
 
-It is a physical object that you commissioned, that you chose the material for, that you are now placing into another person's hand.
+**Version two:** the same information at 16pt, soft-touch, with one line on the back that says what you actually do. It's the same handshake and the same thirty-second conversation. The difference is what's still in their pocket that evening.
 
-For most prospects, **it is the only piece of your work they will ever touch.**
+Now think about what happens in the two seconds before anybody reads either one.
 
-Not see. *Touch.* Before they've visited your shop, before they've read a proposal, before they've watched you do the thing you do - they are holding a small object you decided was good enough to put your name on.
+They've already registered the weight, the edge, and the finish. They haven't decided anything about your business yet - but they've decided something about how carefully you work, and they did it with their hands. The card was commissioned by you, the material was chosen by you, and you handed it to them yourself. Before they've seen your shop, read a proposal, or watched you do the thing you do, that small object is standing in for all of it.
 
-A contractor's card. A designer's card. An attorney's card. A printer's card.
-
-The object is a claim about the work.
+**A card doesn't win the work. It sets the expectation the work then confirms.**
 ---
-### Why weight does what it does
-There's real research on this, though not the kind that produces a tidy percentage.
+### Every business has a version of this
+The card isn't doing the same job in every hand, but the job is always the same shape. Somebody is deciding whether you're careful.
 
-Psychophysics researchers have spent decades mapping how touch shapes judgment. One finding holds up across studies: **thicker and heavier objects are perceived as more luxurious.** Not "look more expensive." *Are perceived as.* The hand reports to the brain before the eye finishes.
+**The contractor.** The card sits on a kitchen counter next to two others for a week.
 
-There's a related line of work on weight and importance. Hand someone a heavier clipboard and they rate the survey on it as more significant. Tell someone a book matters and they estimate it as heavier. The association runs in both directions.
+**The attorney or the accountant.** Discretion and precision are the whole product, and the card is the first sample of both.
 
-None of that gives us a number to print on a slide, and we're not going to invent one. But it explains something every printer already knows: **people decide how they feel about a card in the two seconds before they read it.**
+**The designer or the photographer.** Everyone in the room can judge craft, so the card is being read as work.
+
+**The realtor.** It goes into a folder with a dozen others and has to still be findable in there.
+
+**The trades and the service call.** It gets stuck on a fridge, and the fridge is where the next call comes from.
+
+In every one of those cases the card outlives the conversation by weeks. It is the part of the meeting that keeps working after everyone has gone home, and it costs less than most owners assume.
 ---
-### The specs that actually matter
-Four decisions do most of the work. None of them is design.
+### What the research actually shows
+There's one study worth citing here, and it's worth being precise about what it found.
 
-**Weight.** Standard cards run 14pt. At **16pt** a card stops feeling like paper and starts feeling like an object. At 32pt - two sheets bonded, often with a colored core showing at the edge - it stops feeling like a card and starts feeling like a gift. Most people should stop at 16pt. It's the largest perceptual jump for the smallest money.
+Sappi North America worked with neuroscientist **Dr. David Eagleman** on a reading experiment. Participants read the same brochure for a fictitious company three ways - on high-quality coated paper, on low-grade uncoated paper, and on a screen. The premium-paper group came away with the best comprehension and recall, the most favorable impression of the company, and the highest likelihood to recommend it. A week later, brand-name recall in that group ran about **3:1 over the others.**
 
-**The edge.** Nobody thinks about the edge. Everybody feels it. A clean cut, a painted edge, a rounded corner - the edge is what your thumb finds while you're talking.
+Worth being straight about two limits. Sappi manufactures paper, so the finding isn't disinterested. And the study measured brochures, not business cards. What it establishes is the mechanism - better substrate, better retention - not a number you can apply to a card order.
 
-**The finish.** Soft-touch coating changes the card more than any color decision will. It's the one that makes people say *"oh"* out loud, and it costs less than most owners assume.
+Alongside it sits a long psychophysics literature on how touch shapes judgment, and one finding replicates across decades: thicker, heavier objects are perceived as more substantial and more valuable. Hand someone a heavier clipboard and they rate the survey on it as more important. The hand reports to the brain before the eye is finished.
 
-**And the back.** Most businesses print one side and leave the other blank. It's the lowest-cost square inch in your entire marketing budget and it's usually empty.
+We'll also tell you what we left out. Most of the business-card statistics circulating online - 72% judge a company by its card, 39% won't do business over a cheap one - trace back to a single discredited source. They're not in here on purpose.
+
+*Sources: A Communicator's Guide to the Neuroscience of Touch, Sappi North America with Dr. David Eagleman, 2015; Hurley et al., "The Effect of Decorative Foil Stamping on Consumer Attention," Journal of Applied Packaging Research, Vol. 8, Iss. 2, Clemson University*
+---
+### The four decisions you're already making
+Here's what makes it an easy decision rather than a design decision. You're paying for a card either way, so these four are already being decided - usually by default.
+
+**Weight.** Standard cards run 14pt. At **16pt** a card stops feeling like paper and starts feeling like an object. At 32pt - two sheets bonded, often with a colored core showing at the edge - it stops feeling like a card and starts feeling like a gift. Most businesses should stop at 16pt. It's the largest perceptual jump for the smallest money, and it barely moves the invoice.
+
+**The edge.** Nobody thinks about the edge. Everybody feels it. A clean cut, a painted edge, or a rounded corner is what a thumb finds while you're still talking.
+
+**The finish.** Soft-touch changes a card more than any color decision will, and it costs less than most owners expect. Gloss photographs well and is the most common finish, which is worth knowing when you want to be remembered. Matte reads quieter and takes a pen, which matters if people write on the back. Pick one embellishment if you want one - soft-touch or spot gloss or foil. Stacking all three roughly doubles the invoice for a result most people describe as busy.
+
+**The back.** Most businesses print one side and leave the other blank. It's the lowest-cost square inch in your marketing budget and it's usually empty. One line of what you do, a QR to the work, or a short list of services - anything beats white.
+
+**And the budget, for the record:** a run of **250 double-sided cards starts around $60.** Heavier stocks, soft-touch, painted edges, and foil move up from there. A card isn't where print money goes; it's where print money is most visible.
 ---
 ### One honest catch
-**A card works when it feels intentional.**
+**A card only works when it feels intentional.**
 
-A rushed layout reads as an afterthought. Six phone numbers, three email addresses, a QR code, a logo at 40% opacity behind the text, and a tagline nobody asked for - that card tells a story, and the story is *this was not important to me.*
+We'd love to print you a good one - and we'll be straight with you about what it will and won't do.
 
-A considered card is a small, repeatable proof that you care about quality. Not because it's expensive. Because it's *decided.*
+A card can't make the case for you, and it isn't always the right tool. If your work is visual and the conversation happens at a table, a card is too small; that's what a brochure or a folded leave-behind is for. If someone needs to see six projects, a card with a QR to the portfolio beats a card with six thumbnails on it.
 
-**The card is a sample of your standards.**
+**Get the standard right, and the card is a sample of it.**
 
-You're not printing 500 cards to reach 500 people. You're printing them so you're ready for the dozen conversations that turn into work - and you don't get to know in advance which dozen those are.
-
-That's the case for making every one of them good.
+A card with room to breathe reads as considered. Deciding what to leave off - which number, which address, whether the QR earns its space - is what makes everything you kept land harder. That advantage comes from a decision, not a budget. You're not printing cards to reach 500 people. You're printing them so you're ready for the dozen conversations that turn into work, and you don't get to know in advance which dozen those are.
 ---
-### How to spec one
-1. **Start at 16pt.** If it still feels thin, go up. Most don't need to.
-2. **Use the back.** A single line of what you actually do beats a blank.
-3. **Pick one finish, not three.** Soft-touch *or* spot gloss *or* foil. Stacking them reads as trying too hard.
-4. **Hold it before you order 500.** We'll cut you a blank in the stock you're considering. Carry it in your pocket for a day.
-5. **Reprint when the information changes** - not when you get bored. A card people kept is working.
+### How to think about it
+1. **Start at 14pt.** If it still feels thin in your hand, go up. 16pt is the jump most cards benefit from.
+2. **Use the back.** A single line of what you actually do beats a blank side.
+3. **Pick one finish, not three.** Soft-touch or spot gloss or foil.
+4. **Decide who writes on it.** If people jot notes on your card, skip gloss and soft-touch - neither takes ink.
+5. **Hold it before you order 500.** We'll cut you a blank in the stock you're considering. Carry it in your pocket for a day and see what you think of it.
+6. **Reprint when the information changes,** not when you get bored. A card people kept is working.
 
-Often the right answer is one step up in weight and nothing else. That's a real recommendation, and it barely moves the invoice.
+Often the right answer is one step up in weight and nothing else. That's a real recommendation, and it hardly changes the price.
 ---
 ### Let's make a card worth keeping
-Business cards, letterhead, and collateral - printed in Shavano Park. Come hold the stocks, feel the edges, and decide with your hands instead of a screen.
+Business cards, letterhead, and collateral - designed and printed in Shavano Park. Come hold the stocks, feel the edges, and decide with your hands instead of a screen. Stocks, finishes, and turnaround are all on our [business cards page](https://www.alphagraphics.com/us-texas-san-antonio-us769/print-services/business-cards).
 
-**[See the stocks and finishes ->]**
+**[Start a card quote ->]**
 ---
 FAQ Friday is a weekly answer to the questions San Antonio business owners actually ask. Free, every Friday.`;
 
 window.AG_NEWSLETTERS_RAW["11"] = `# FAQ FRIDAY · ISSUE 11
 ## What should your storefront windows be doing?
-Publish: Friday, September 4, 2026
+Publish: Friday, September 11, 2026
 Slug: /faq-friday/what-your-storefront-windows-should-do
 Read time: ~4 min
 ---
@@ -914,7 +932,7 @@ FAQ Friday is a weekly answer to the questions San Antonio business owners actua
 
 window.AG_NEWSLETTERS_RAW["12"] = `# FAQ FRIDAY · ISSUE 12
 ## Why go local instead of an online printer?
-Publish: Friday, September 11, 2026
+Publish: Friday, September 18, 2026
 Slug: /faq-friday/why-go-local-instead-of-an-online-printer
 Read time: ~4 min
 ---
@@ -988,7 +1006,7 @@ FAQ Friday is a weekly answer to the questions San Antonio business owners actua
 
 window.AG_NEWSLETTERS_RAW["13"] = `# FAQ FRIDAY · ISSUE 13
 ## How do you keep a building's signage consistent as tenants change?
-Publish: Friday, September 18, 2026
+Publish: Friday, September 25, 2026
 Slug: /faq-friday/keep-building-signage-consistent
 Read time: ~4 min
 ---
@@ -1060,7 +1078,7 @@ FAQ Friday is a weekly answer to the questions San Antonio business owners actua
 
 window.AG_NEWSLETTERS_RAW["14"] = `# FAQ FRIDAY · ISSUE 14
 ## What do you get when you buy a brand identity?
-Publish: Friday, September 25, 2026
+Publish: Friday, October 2, 2026
 Slug: /faq-friday/what-do-you-get-with-a-brand-identity
 Read time: ~4 min
 ---
@@ -1236,14 +1254,15 @@ FAQ Friday is a weekly answer to the questions San Antonio business owners actua
    --------------------------------------------------------------------- */
 (function () {
   function parseRuns(text) {
-    // splits **bold** and *italic* into runs [{t, b, i}]
+    // splits [label](url), **bold** and *italic* into runs [{t, b, i, h}]
     const runs = [];
-    const re = /(\*\*[^*]+\*\*|\*[^*]+\*)/g;
+    const re = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)|\*\*[^*]+\*\*|\*[^*]+\*/g;
     let last = 0, m;
     while ((m = re.exec(text)) !== null) {
       if (m.index > last) runs.push({ t: text.slice(last, m.index) });
       const tok = m[0];
-      if (tok.startsWith("**")) runs.push({ t: tok.slice(2, -2), b: true });
+      if (m[1]) runs.push({ t: m[1], h: m[2] });
+      else if (tok.startsWith("**")) runs.push({ t: tok.slice(2, -2), b: true });
       else runs.push({ t: tok.slice(1, -1), i: true });
       last = re.lastIndex;
     }
