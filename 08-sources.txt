@@ -1,0 +1,41 @@
+WEEK 10 - SOURCES
+
+USED IN THE COPY
+
+1. A Communicator's Guide to the Neuroscience of Touch
+   Sappi North America with Dr. David Eagleman, 2015.
+   Written with Lana Rigsby of Rigsby Hull.
+   Finding used: participants read the same brochure for a fictitious
+   company on high-quality coated paper, low-grade uncoated paper, and
+   on screen. Premium-paper readers had the best comprehension and
+   recall, the most favorable impression of the company, and the highest
+   likelihood to recommend it. Brand-name recall a week later ran about
+   3:1 over the other groups.
+   Caveat DISCLOSED IN COPY: Sappi manufactures paper.
+
+2. Weight-to-importance effect (heavy clipboard studies)
+   Standard psychophysics / embodied-cognition finding, replicated.
+   Used qualitatively only. No percentage attached - deliberately.
+
+3. Hurley, R.A., Holmes, J.L., Tonkin, C.E., Cooksey, K., Rice, J.C.
+   "The Effect of Decorative Foil Stamping on Consumer Attention."
+   Journal of Applied Packaging Research, Vol. 8, Iss. 2.
+   Clemson University; 172 participants; mobile eye tracking in the
+   CUshop immersive retail lab.
+   Used only to establish that peer-reviewed work on foil and attention
+   exists. Packaging, not business cards - stated as such in the copy.
+   No figure quoted.
+
+DELIBERATELY NOT USED  (see "Week 10 content pass.html" for the full audit)
+   2.5% sales lift per 2,000 cards ......... no locatable primary source
+   72% judge a company by its card ......... Statistic Brain, discredited
+   39% won't do business w/ a cheap card ... same origin
+   88% discarded within a week ............. no primary source
+   86% see thicker cards as professional ... no study attached
+   38% more professional on heavy stock .... single vendor page only
+   Foil "23% faster retinal response" ...... bracket citations, unresolvable
+   Foil "increases purchases 40%" .......... vendor blog, no study
+
+   Rule held to: an unsourced number in AEO content is a liability that
+   compounds. Every figure above appears on dozens of print-vendor blogs
+   citing each other.

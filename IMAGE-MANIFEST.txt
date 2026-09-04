@@ -1,0 +1,44 @@
+WEEK 10 - IMAGE MANIFEST
+Every image any Week 10 output references, web-optimized for upload.
+
+BLOG BODY IMAGES (images/) - 4 photos, referenced in 01-post-body.html.txt
+  Upload all four to the CMS media library BEFORE pasting the body.
+  Each must resolve at:
+  https://d6wz8uj70mtdq.cloudfront.net/ff792e85-dd9d-491c-9a7b-faa3f42d4962/image+library/unassigned/<filename>
+
+SLIDE ASSETS (images/) - wordmarks used by the slide builder
+SOCIAL SQUARES (social/) - the five 1080x1080 FAQ Friday posts
+
+OPTIMIZATION
+  Photos capped at 1600px on the long edge, JPEG quality 82.
+  Social squares held at 1080x1080, JPEG quality 85.
+  Wordmark PNG downscaled to 1200px wide, alpha preserved.
+  The WEBP wordmark was already small and is passed through unchanged.
+
+  name                        before        -> after                  size
+  w10.jpg                     1024x1536     -> 1024x1536             215 KB ->   202 KB
+  w10-gold-foil.jpg           1536x1024     -> 1536x1024             216 KB ->   203 KB
+  w10-spot-uv.jpg             1448x1086     -> 1448x1086             177 KB ->   168 KB
+  w10-embossed.jpg            1448x1086     -> 1448x1086              99 KB ->    94 KB
+  ag-wordmark-reverse.png     3601x881      -> 1200x294              156 KB ->    53 KB
+  ag-wordmark.webp            3601x881      -> 3601x881 (unchanged)   26 KB ->    26 KB
+  social/01-cover.jpg         1080x1080     -> 1080x1080              73 KB ->    56 KB
+  social/02-answer.jpg        1080x1080     -> 1080x1080             113 KB ->    90 KB
+  social/03-numbers.jpg       1080x1080     -> 1080x1080             101 KB ->    80 KB
+  social/04-catch.jpg         1080x1080     -> 1080x1080             104 KB ->    84 KB
+  social/05-ask.jpg           1080x1080     -> 1080x1080             105 KB ->    77 KB
+  TOTAL  1383 KB -> 1134 KB
+
+ALT TEXT (must match 03-cms-fields.txt)
+  w10.jpg            Design concept - an architect hands a printed business
+                     card across a reception desk.
+  w10-gold-foil.jpg  Design concept - gold foil logo stamped on a soft-touch
+                     white business card.
+  w10-spot-uv.jpg    Design concept - black business cards with a gloss spot
+                     UV logo and a gold painted edge.
+  w10-embossed.jpg   Design concept - blind embossed folded business card on
+                     olive green uncoated stock.
+
+  All four are design concepts for a fictional company. Alt text says so and
+  each figcaption ends "Design concept." The bottom-of-page disclaimer covers
+  the rest.

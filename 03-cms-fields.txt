@@ -1,0 +1,44 @@
+WEEK 10 - CMS FIELD VALUES  (Bridgeline / Post Details)
+
+POST DETAILS TAB
+Title              Do business cards still matter in 2026?
+Description        What the paper research actually supports, and the four specs that decide whether a business card gets kept.
+URL Friendly Name  do-business-cards-still-matter-in-2026
+Date               9/4/2026
+Author Name        San Antonio | Shavano Park
+Author Email       us769@alphagraphics.com
+Allow Comments     checked
+
+Body: paste 01-post-body.html.txt in the <> source view. Do NOT add an H1.
+
+SEO PROPERTIES TAB
+Title Tag          Do business cards still matter in 2026?
+                   (the site appends "| San Antonio | Shavano Park" automatically - do not add it)
+H1 Tag             Do business cards still matter in 2026?
+Keywords           business cards San Antonio, business card printing, AlphaGraphics San Antonio
+Descriptive Meta   What the paper research actually supports, and the four specs that decide whether a business card gets kept.
+Other Metadata     paste 02-other-metadata.txt (1961 chars - field limit is 2000)
+
+ADDITIONAL PROPERTIES TAB
+Location           leave EMPTY
+Image              https://d6wz8uj70mtdq.cloudfront.net/ff792e85-dd9d-491c-9a7b-faa3f42d4962/image+library/unassigned/w10.jpg
+Labels             leave EMPTY
+Additional Info    leave EMPTY
+
+IMAGES - upload all 4 to the same media folder BEFORE pasting the body
+  w10.jpg
+    alt: Architect handing a printed business card across a reception desk at Halcyon Studio Architecture
+  w10-gold-foil.jpg
+    alt: Gold foil logo stamped on a soft-touch white business card
+  w10-spot-uv.jpg
+    alt: Black business cards with a gloss spot UV logo and a gold painted edge
+  w10-embossed.jpg
+    alt: Blind embossed folded business card on olive green uncoated stock
+
+LIVE URL (expected)
+  https://www.alphagraphics.com/us-texas-san-antonio-us769/blog/blog-list/2026/09/do-business-cards-still-matter-in-2026
+  If the CMS produces a different path, tell Claude - 2 URLs in the schema must match.
+
+DATE NOTE
+  Week 10 moved from Aug 21 to Fri Sept 4, 2026 (one week skipped).
+  Weeks 11 and 12 shift by the same week: Wk 11 -> Sept 11, Wk 12 -> Sept 18.

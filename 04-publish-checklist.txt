@@ -1,0 +1,14 @@
+WEEK 10 PUBLISH CHECKLIST
+
+[ ] 1. Upload the 4 images in images/ to the CMS media library (same folder as week 01)
+[ ] 2. Confirm each image URL loads in a browser tab
+[ ] 3. New post - fill the Post Details tab from 03-cms-fields.txt (date 9/4/2026)
+[ ] 4. <> source view - paste 01-post-body.html.txt - save
+[ ] 5. Confirm all 4 images render in the editor
+[ ] 6. SEO Properties - Title Tag, H1, Keywords, Descriptive Metadata
+[ ] 7. SEO Properties - Other Metadata - paste 02-other-metadata.txt
+[ ] 8. Additional Properties - Image only; Location and Labels stay EMPTY
+[ ] 9. Save As Draft - reload - confirm every field persisted
+[ ] 10. Publish
+[ ] 11. Confirm the post appears at /blog/blog-list/2026/09
+[ ] 12. search.google.com/test/rich-results - expect Article + FAQ (3 questions), 0 errors

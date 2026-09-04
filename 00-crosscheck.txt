@@ -1,0 +1,139 @@
+WEEK 10 - CROSS-CHECK REPORT
+Do business cards matter in 2026?  |  Friday, September 4, 2026
+Run against FAQ_FRIDAY_WORKFLOW.md, all nine stages.
+
+-----------------------------------------------------------------------
+LOCKED TEXT (carried verbatim everywhere it appears)
+
+  Question ....... Do business cards matter in 2026?
+  Slug ........... /faq-friday/do-business-cards-matter
+  Pricing line ... $60 for 250 double-sided cards, finishes and heavier
+                   stocks move up from there.
+  Source line .... A Communicator's Guide to the Neuroscience of Touch,
+                   Sappi North America with Dr. David Eagleman, 2015.
+  Caveat ......... Sappi manufactures paper, so the finding is not
+                   disinterested, and the study measured brochures, not
+                   business cards. It establishes the mechanism, not a
+                   number you can apply to a card order.
+
+-----------------------------------------------------------------------
+STAGE 1 - STAT RESEARCH ......................................... PASS
+  Three sources logged in 08-sources.txt with what each actually
+  measured. Question phrased as a customer would ask it.
+
+STAGE 2 - CHECKS ................................................ PASS
+  Eight stats deliberately rejected and logged, including the whole
+  banned Statistic Brain family. Sappi's interest disclosed in every
+  format. No invented numbers. One pricing line, from our price list.
+
+STAGE 3 - SLIDES ................................................ REBUILT
+  The Week 10 carousel had been built on its own one-off CSS: five dark
+  slides, hardcoded Roboto Slab, no light slides, no callout, no CTA
+  button, no mono sign-off. Weeks 04-09 all use one system.
+  Rebuilt on the Week 09 template, unchanged:
+    dark cover (Q. mark, swipe) - light answer - dark numbers (.rows
+    + .src) - light honest catch (white .callout, red left border) -
+    red ask (white .btn, mono .fine line)
+  Type now comes from colors_and_type.css (--font-display /
+  --font-body) instead of a hardcoded stack.
+  Content fixes made in the same pass:
+    - Slide 01 title said "still matter in 2026"; now matches the
+      locked question.
+    - Slide 02 argued "your website competes for a search result, your
+      card competes with being forgotten," which is not in the approved
+      newsletter. Replaced with the approved short answer.
+    - Slide 03 carried 3:1 with no source and no caveat, which the
+      rules do not allow on a stat slide. The source line and both
+      limits are now on the slide.
+  Files: _slide-builder-w10.html (matches _slide-builder-w09.html),
+  Week 10 - FAQ Friday slides.html, _slides.json regenerated from the
+  same markup. images/ag-wordmark.webp added for the light slides.
+  All five slides fit 1080 x 1080 with no overflow.
+
+STAGE 4 - ONLINE NEWSLETTER ..................................... FIXED
+  Rewritten to the eight standing sections after drifting to ten with
+  renamed headings. Fragment-and-italics rhythm removed. All facts,
+  both sources, and the pricing line intact. ~1,450 words, ~5 min.
+  Renders live from AG_NEWSLETTERS_RAW["10"].
+  05-newsletter-online.txt regenerated from that source.
+
+STAGE 5 - PRINT SHEET ........................................... FIXED
+  06-newsletter-print.txt recut from the approved online copy. Two rule
+  breaks removed: the Sappi caveat was marked "[CUT] if space is tight"
+  (the caveat is never cut for room), and "Same words. Same design.
+  Different paper." was three fragments. The source line is now on the
+  sheet.
+  OPEN: AGShavano_FAQFriday_Wk10_FINAL.html still holds the old copy.
+  It needs the recut text pasted in and a refit to 8.5 x 11.
+
+STAGE 6 - VOICE, TONE, PARTNERSHIP .............................. FIXED
+  Online, print, and slides make the same argument with the same
+  numbers. No fragments, no italic one-word punch, no manifesto
+  rhythm, no emoji, no banned stats. Read time matches word count.
+  Date is next in sequence after Week 09 (Aug 21 -> Sept 4).
+
+  Partnership rule added to BRAND_COPYWRITING_GUIDELINES.md section 3
+  and enforced across all six outputs. Three lines broke it by
+  characterizing the reader's own existing card:
+    - "The layout is a little crowded, the stock bends a bit between
+      two fingers" -> version one now described neutrally: it does the
+      job it was made for.
+    - "Gloss ... feels like everyone else's card" -> "is the most
+      common finish, which is worth knowing when you want to be
+      remembered."
+    - "A rushed layout reads as an afterthought ... that card tells a
+      story, and the story is that this wasn't important to you." ->
+      "A card with room to breathe reads as considered. Deciding what
+      to leave off is what makes everything you kept land harder."
+  Same information, same honesty, nobody diminished. Corrected in the
+  canonical source and propagated to print, blog, social copy, and the
+  social frames. 05-newsletter-online.txt regenerated.
+
+STAGE 7 - DEPLOY PACKAGE ........................................ FIXED
+  Schema is FAQPage + BlogPosting only, 1,961 chars, under the 2,000
+  cap. All image URLs are direct CloudFront paths. Three internal
+  links point at live service pages.
+  Three contradictions with the approved newsletter corrected in
+  01-post-body.html.txt:
+    - "soft-touch costs more" vs. the newsletter's "costs less than
+      most owners expect"
+    - "the print industry's own tracked direct-mail cases show
+      embellished pieces outperforming plain ones" - an unsourced
+      industry claim; replaced with the Clemson study's real scope
+    - "Order enough" / "a card you are rationing" vs. the newsletter's
+      position that 250 good cards beat 500 you would not hand over
+  OPEN: the blog headline is "Do business cards still matter in 2026?"
+  while the newsletter question is "Do business cards matter in 2026?"
+  The blog URL is built from that title and the title is permanent once
+  published. Nothing is published yet, so this is still changeable -
+  your call. Recommend keeping "still" for search and treating the
+  newsletter question as the FAQ Friday framing.
+
+STAGE 8 - SOCIAL PACKAGE ........................................ NEW
+  07-social-package.txt - seven days, Facebook and Instagram copy,
+  hashtags, and alt text for each. Every claim traces to the approved
+  newsletter; nothing new was written.
+  Week 10 - Social package.html - 28 frames, drawn at real pixel size:
+  1080x1080, 1080x1350, 1080x1920, and 1200x630 for each day.
+  Day 3 is the only post carrying a number. Source on the image,
+  caveat in both captions. Day 6 uses the pricing line verbatim.
+  All four photos carry "design concept" alt text.
+  OPEN: frames still need exporting to image files. The digital
+  newsletter shows the five social squares as hatched placeholders
+  until they exist.
+
+STAGE 9 - AEO BLOG .............................................. PASS
+  H1 is the question. Answer lands in the first 46 words with
+  data-speakable. Nine question-form H2/H3 headings. Sappi named with
+  its year inline in the body. Pricing line present as a plain
+  declarative sentence. "Shavano Park" and "San Antonio" in the H1
+  region, body, and metadata. Both schema blocks valid and under cap.
+
+-----------------------------------------------------------------------
+OPEN ITEMS, IN ORDER
+
+  1. Decide the blog headline: "still matter" or "matter". It sets the
+     permanent slug.
+  2. Repaste the recut print copy into the Wk10 FINAL sheet and refit.
+  3. Export the social frames to image files.
+  4. Then Stage 6 approval, and the package is ready to upload.
